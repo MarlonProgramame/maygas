@@ -1,0 +1,16 @@
+header{
+    background-color: rgb(255, 235, 123);
+    padding: 80px;
+    margin-bottom: 1em;
+}
+header img{
+    max-width: 100%;
+}
+header h1, h2,h3{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+header div{
+    column-count: 2;
+    column-gap: 60px;    
+}
