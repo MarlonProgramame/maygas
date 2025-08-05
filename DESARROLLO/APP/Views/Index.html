@@ -1,126 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Maygas S.A.S</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <title>Maygas</title>
+  <link rel="stylesheet" href="../../Public/Css/Styles.css">
 </head>
 <body>
-
-  <!-- 🔹 NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Maygas S.A.S</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-<div id="carouselMaygas" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="../../../DESARROLLO/Public/Img/MAYGAS.png" class="d-block w-100" alt="Distribución de gas" />
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Distribución Segura</h5>
-        <p>Gas a granel para empresas e industrias</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="../../../DESARROLLO/Public/Img/MAYGAS.png" class="d-block w-100" alt="Tanques" />
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Calidad Garantizada</h5>
-        <p>Tanques y cilindros certificados</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="../../../DESARROLLO/Public/Img/MAYGAS.png" class="d-block w-100" alt="Reparto" />
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Entregas Puntuales</h5>
-        <p>Cubrimos toda la región</p>
-      </div>
-    </div>
+  <!-- Preloader -->
+  <div id="preloader">
+    <img src="../../Public/Img/" alt="Cargando...">
   </div>
 
-  <!-- Botones de control -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselMaygas" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselMaygas" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-</div>
- 
-  <!-- 🛍️ SECCIÓN DE PRODUCTOS -->
-  <section class="container my-5">
-    <h2 class="text-center mb-4">Nuestros Productos</h2>
-    <div class="row g-4">
-
-          <!-- Producto 1 -->
-    <div class="col-md-4">
-      <div class="card h-100">
-        <a data-bs-toggle="modal" data-bs-target="#modalProducto1">
-          <img src="../../../DESARROLLO/Public/Img/MAYGAS.png" class="card-img-top" alt="Tanque 40kg">
-        </a>
-        <div class="card-body">
-          <h5 class="card-title">Tanque de Gas 40kg</h5>
-          <p class="card-text">Ideal para negocios y uso doméstico de alto consumo.</p>
-        </div>
+  <!-- Contenido principal -->
+  <div id="contenido-principal" style="display: none;">
+    <header class="navbar">
+      <div class="logo">
+        <img src="../../Public/Img/MAYGAS.png" alt="Maygas Logo">
       </div>
-    </div>
+      <nav class="nav-menu">
+        <a href="#">INICIO</a>
+        <a href="#">¿QUIENES SOMOS?</a>
+        <a href="#">PRODUCTOS</a>
+        <a href="#">CETIFICADOS</a>
+        <a href="#" class="btn-contacto">CONTACTO</a>
+      </nav>
+    </header>
 
-    <!-- Modal del Producto 1 -->
-    <div class="modal fade" id="modalProducto1" tabindex="-1" aria-labelledby="tituloProducto1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="tituloProducto1">Tanque de Gas 40kg</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-          </div>
-          <div class="modal-body">
-            <img src="../../../DESARROLLO/Public/Img/MAYGAS.png" class="img-fluid mb-3" alt="Tanque de Gas 40kg">
-            <p>Este tanque de gas está diseñado para un uso prolongado en hogares o negocios pequeños. Cuenta con válvula de seguridad, materiales resistentes y certificación nacional. Capacidad: 40kg. Ideal para cocinas, calentadores y uso general.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- Aquí puedes agregar más contenido debajo -->
+  </div>
 
-
-      <!-- Producto 2 -->
-      <div class="col-md-4">
-        <div class="card h-100">
-          <img src="../../../DESARROLLO/Public/Img/MAYGAS.png" class="card-img-top" alt="Tanque 100kg">
-          <div class="card-body">
-            <h5 class="card-title">Tanque de Gas 100kg</h5>
-            <p class="card-text">Diseñado para restaurantes, panaderías y comercios medianos.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Producto 3 -->
-      <div class="col-md-4">
-        <div class="card h-100">
-          <img src="../../../DESARROLLO/Public/Img/MAYGAS.png" class="card-img-top" alt="Gas a granel">
-          <div class="card-body">
-            <h5 class="card-title">Suministro de Gas a Granel</h5>
-            <p class="card-text">Para plantas industriales y grandes consumidores.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Bootstrap JS Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../Public/Js/main.js"></script>
 </body>
 </html>

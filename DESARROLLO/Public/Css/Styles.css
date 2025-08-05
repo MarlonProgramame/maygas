@@ -1,36 +1,37 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  background: #f7f7f7;
-  color: #333;
+  font-family: Arial, sans-serif;
 }
 
-header {
-  background-color: #004080;
-  color: white;
-  padding: 1rem;
-  text-align: center;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  background-color: white;
+  border-bottom: 1px solid #e2cbd0; /* Línea delgada superior rosada */
 }
 
-nav a {
-  color: white;
-  margin: 0 15px;
+.logo img {
+  height: 77px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.nav-menu a {
   text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
-.hero {
-  background: url('../img/gas-bg.jpg') no-repeat center center/cover;
-  color: rgb(0, 0, 0);
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.btn {
-  display: inline-block;
+.btn-contacto {
+  background-color: #ffe100;
   padding: 10px 20px;
-  background: #ff9900;
-  color: rgb(255, 46, 46);
-  text-decoration: none;
-  border-radius: 5px;
+  border-radius: 25px;
+  color: black;
+  font-weight: bold;
 }
