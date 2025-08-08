@@ -22,7 +22,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #000000; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #000000;
-  --heading-color1: #ffffff; /* Color for headings, subheadings and title throughout the website */
+  --heading-color1: #000000; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #e6d925; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #000000; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #000000; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
@@ -33,7 +33,7 @@
   --nav-color: #000000;  /* The default color of the main navmenu links */
   --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #BA2B2C; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-background-color: #e6d925; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #060606; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #000000; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
@@ -49,7 +49,7 @@
   --background-color: #FFD700;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #BA2B2C;
+  --surface-color: #e6d925;
   --contrast-color: #ffffff;
 }
 
@@ -110,7 +110,7 @@ body {
 
 .btn {
   color: var(--heading-color1);
-  background-color: #BA2B2C;
+  background-color: #e6d925;
 }
 
 .btn:hover {
@@ -213,7 +213,7 @@ h6 {
 ------------------------------*/
 .php-email-form .error-message {
   display: none;
-  background: #BA2B2C;
+  background: #e6d925;
   color: #ffffff;
   text-align: left;
   padding: 15px;
@@ -2803,7 +2803,7 @@ p {
 }
 /* Estilo base para los tabs */
 .nav-tabs .nav-link {
-  background-color: #BA2B2C;      /* Fondo rojo */
+  background-color: #e6d925;      /* Fondo rojo */
   color: white;               /* Texto blanco */
   border: none;
   text-align: center;
@@ -2961,7 +2961,7 @@ body {
   color: #fff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
-/* Retiramos el borde de la tarjeta completa */
+/* TARJETA - se conserva tu estilo */
 .product-card {
   border: none;
   border-radius: 8px;
@@ -2970,24 +2970,25 @@ body {
   text-align: center;
   position: relative;
   transition: transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Aplicamos el borde solo a la imagen */
+/* Borde solo en la imagen */
 .image-container {
   position: relative;
   overflow: hidden;
-  border: 3px solid #FFD700; /* Borde dorado SOLO en la imagen */
+  border: 3px solid #FFD700;
   border-radius: 8px;
+  cursor: pointer;
 }
 
-/* Aseguramos que la imagen se adapte bien */
 .product-image {
   width: 100%;
   border-radius: 8px;
   display: block;
 }
 
-/* Botón estilo ovalado sobre la imagen */
+/* Botón ovalado encima de la imagen */
 .quote-button {
   position: absolute;
   top: 85%;
@@ -3008,15 +3009,91 @@ body {
   z-index: 2;
 }
 
-/* Mostrar el botón cuando el cursor pasa por la imagen */
 .image-container:hover .quote-button {
   display: flex;
 }
 
-/* Estilo para el nombre del producto debajo */
 .product-name {
   margin-top: 10px;
   font-size: 1.1rem;
   color: rgb(0, 0, 0);
 }
 
+/* MODAL DE DETALLE DEL PRODUCTO */
+.product-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 80px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.product-modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.modal-quote-button {
+  background-color: #FFD700;
+  color: #000;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.close-modal {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+.text-amarillo {
+  color: #FFD700 !important; /* o el tono que prefieras */
+}
+.custom-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #FFD700; /* Dorado */
+  color: #000000;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.custom-btn i {
+  margin-left: 8px;
+}
+
+.custom-btn:hover {
+  background-color: #c29e30;
+  transform: translateY(-2px);
+  text-decoration: none;
+  color: #000000;
+}
