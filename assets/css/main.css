@@ -7,6 +7,7 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --background-color1: #000000;
   --default-color: #000000; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #000000;
   --heading-color1: #000000; /* Color for headings, subheadings and title throughout the website */
@@ -535,6 +536,7 @@ h6 {
   padding: 15px 0 5px 0;
   position: relative;
 }
+
 
 .footer h3 {
   font-size: 36px;
