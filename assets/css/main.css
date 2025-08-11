@@ -10,7 +10,7 @@
   --default-color: #000000; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #000000;
   --heading-color1: #000000; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #FFE900; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #FFF411; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #000000; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #000000; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -20,7 +20,7 @@
   --nav-color: #000000;  /* The default color of the main navmenu links */
   --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #FFE900; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-background-color: #FFF411; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #060606; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #000000; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
@@ -33,10 +33,10 @@
 } 
 
 .dark-background {
-  --background-color: #FFE900;
+  --background-color: #FFF411;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #FFE900;
+  --surface-color: #FFF411;
   --contrast-color: #ffffff;
 }
 
@@ -97,7 +97,7 @@ body {
 
 .btn {
   color: var(--heading-color1);
-  background-color: #FFE900;
+  background-color: #FFF411;
 }
 
 .btn:hover {
@@ -200,7 +200,7 @@ h6 {
 ------------------------------*/
 .php-email-form .error-message {
   display: none;
-  background: #FFE900;
+  background: #FFF411;
   color: #ffffff;
   text-align: left;
   padding: 15px;
@@ -2763,9 +2763,9 @@ section,
 }
 
 .quote-button:hover {
-  background-color: #FFE900;
+  background-color: #FFF411;
   color: rgb(0, 0, 0);
-  border-color: #FFE900;
+  border-color: #FFF411;
 }
 
 .info-item {
@@ -2787,7 +2787,7 @@ p {
 }
 /* Estilo base para los tabs */
 .nav-tabs .nav-link {
-  background-color: #FFE900;      /* Fondo rojo */
+  background-color: #FFF411;      /* Fondo rojo */
   color: white;               /* Texto blanco */
   border: none;
   text-align: center;
@@ -2961,7 +2961,7 @@ body {
 .image-container {
   position: relative;
   overflow: hidden;
-  border: 3px solid #FFE900;
+  border: 3px solid #FFF411;
   border-radius: 8px;
   cursor: pointer;
 }
@@ -2978,7 +2978,7 @@ body {
   top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #FFE900;
+  background-color: #FFF411;
   color: #000;
   border: none;
   border-radius: 25px;
@@ -2988,7 +2988,7 @@ body {
   justify-content: center;
   font-size: 16px;
   cursor: pointer;
-  box-shadow: 0 0 10px #FFE900;
+  box-shadow: 0 0 10px #FFF411;
   transition: opacity 0.3s ease;
   z-index: 2;
 }
@@ -3036,7 +3036,7 @@ body {
 }
 
 .modal-quote-button {
-  background-color: #FFE900;
+  background-color: #FFF411;
   color: #000;
   border: none;
   border-radius: 25px;
@@ -3056,12 +3056,12 @@ body {
   cursor: pointer;
 }
 .text-amarillo {
-  color: #FFE900 !important; /* o el tono que prefieras */
+  color: #000000 !important; /* o el tono que prefieras */
 }
 .custom-btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #FFE900; /* Dorado */
+  background-color: #FFF411; /* Dorado */
   color: #000000;
   font-weight: bold;
   border: none;
@@ -3076,7 +3076,7 @@ body {
 }
 
 .custom-btn:hover {
-  background-color: #FFE900;
+  background-color: #FFF411;
   transform: translateY(-2px);
   text-decoration: none;
   color: #000000;
