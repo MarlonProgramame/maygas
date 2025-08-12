@@ -51,10 +51,10 @@
 --------------------------------------------------------------*/
 .whatsapp-float {
   position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 20px;
-  left: 20px; /* ← Cambiado de right a left */
+  width: 50px;
+  height: 50px;
+  bottom: 130px;
+  right: 10px;
   background-color: #25d366;
   color: white;
   border-radius: 50%;
@@ -66,26 +66,14 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .whatsapp-float:hover {
-  position: fixed;
-  width: 65px;
-  height: 65px;
-  bottom: 20px;
-  left: 20px; /* ← Cambiado de right a left */
-  background-color: #25d366;
-  color: white;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 45px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  z-index: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
+  background-color: #1ebe5d; /* solo cambia color */
+  font-size: 35px; /* agranda el icono, no el botón */
 }
+
 
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
@@ -601,30 +589,28 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
-
-
-/*--------------------------------------------------------------
 # Scroll Top Button
 --------------------------------------------------------------*/
 .scroll-top {
   position: fixed;
   visibility: hidden;
   opacity: 0;
-  right: 15px;
-  bottom: -15px;
+  right: 10px; 
+  bottom: 60px; 
   z-index: 99999;
   background-color: var(--accent-color);
-  
-  width: 44px;
-  height: 44px;
-  border-radius: 50px;
+  width: 50px; 
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* misma sombra */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: all 0.4s;
 }
 
 .scroll-top i {
-  font-size: 24px;
+  font-size: 30px; 
   color: var(--heading-color1);
   line-height: 0;
 }
@@ -637,7 +623,7 @@ h6 {
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
-  bottom: 15px;
+  bottom: 60px; 
 }
 
 /*--------------------------------------------------------------
@@ -2084,10 +2070,6 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
 # Blog Posts Section
 --------------------------------------------------------------*/
 .blog-posts article {
@@ -2679,7 +2661,9 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
 }
-
+/*--------------------------------------------------------------
+# Productos
+--------------------------------------------------------------*/
 .product-card {
   text-align: center;
   padding: 20px;
@@ -2712,7 +2696,9 @@ section,
   font-size: 16px;
   margin: 10px 0 15px;
 }
-
+/*--------------------------------------------------------------
+# boton productos
+--------------------------------------------------------------*/
 .quote-button {
   padding: 10px 20px;
   font-weight: bold;
@@ -2727,7 +2713,9 @@ section,
   color: rgb(0, 0, 0);
   border-color: #FFF411;
 }
-
+/*--------------------------------------------------------------
+# informacion
+--------------------------------------------------------------*/
 .info-item {
   align-items: flex-start;
 }
@@ -2745,27 +2733,33 @@ p {
   margin-bottom: 0.25rem;
   color: #333;
 }
-/* Estilo base para los tabs */
+
+/*--------------------------------------------------------------
+# tabs
+--------------------------------------------------------------*/
 .nav-tabs .nav-link {
-  background-color: #FFF411;      /* Fondo rojo */
+  background-color: #FFF411;   
   color: white;               /* Texto blanco */
   border: none;
   text-align: center;
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Hover: puedes mantener rojo o usar un tono diferente */
+
 .nav-tabs .nav-link:hover {
-  background-color: #ffffff;  /* Rojo más oscuro al pasar el cursor */
+  background-color: #ffffff;  
   color: rgb(255, 255, 255);
 }
 
 /* Tab activo (opcional: más oscuro para diferenciar) */
 .nav-tabs .nav-link.active {
-  background-color: #ffffff;  /* Rojo oscuro */
+  background-color: #ffffff;  
   color: white;
 }
 
+/*--------------------------------------------------------------
+# banner
+--------------------------------------------------------------*/
 .banner {
     position: relative;
     max-width: 100%;
@@ -2845,6 +2839,9 @@ p {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
+/*--------------------------------------------------------------
+# responsive banner
+--------------------------------------------------------------*/
 @media (max-width: 1280px) {
     .banner {
         height: 230px;
@@ -2905,6 +2902,9 @@ body {
   color: #fff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
+/*--------------------------------------------------------------
+# productos
+--------------------------------------------------------------*/
 /* TARJETA - se conserva tu estilo */
 .product-card {
   border: none;
@@ -2931,7 +2931,9 @@ body {
   border-radius: 8px;
   display: block;
 }
-
+/*--------------------------------------------------------------
+# place hover para boton flotante cotizr
+--------------------------------------------------------------*/
 /* Botón ovalado encima de la imagen */
 .quote-button {
   position: absolute;
@@ -2962,7 +2964,9 @@ body {
   font-size: 1.1rem;
   color: rgb(0, 0, 0);
 }
-
+/*--------------------------------------------------------------
+# product detalle
+--------------------------------------------------------------*/
 /* MODAL DE DETALLE DEL PRODUCTO */
 .product-modal {
   display: none;
@@ -3065,7 +3069,11 @@ body {
 }
 .numero-telefono {
   color: black !important;
+
 }
+/*--------------------------------------------------------------
+# footer
+--------------------------------------------------------------*/
 /* Escritorio */
 .footer-wrapper {
   display: flex;
@@ -3098,9 +3106,9 @@ body {
   .footer-left,
   .footer-center,
   .footer-right {
-    display: flex;            /* Hacemos flex el contenedor */
-    justify-content: center;  /* Centramos horizontalmente */
-    width: 100%;               /* Que ocupe toda la fila */
+    display: flex;            
+    justify-content: center;  
+    width: 100%;              
   }
 
   .footer-center {
@@ -3115,6 +3123,9 @@ body {
     order: 3;
   }
 }
+/*--------------------------------------------------------------
+# prelaoader MAYGAS
+--------------------------------------------------------------*/
   /* Preloader */
 #preloader1 {
   position: fixed;
@@ -3144,8 +3155,3 @@ body {
   opacity: 0;
   pointer-events: none;
 }
-
-
-
-
-
