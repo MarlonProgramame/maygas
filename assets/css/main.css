@@ -1,29 +1,41 @@
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+:root {
+  --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
   --background-color1: #000000;
-  --default-color: #000000; /* Default color used for the majority of the text content across the entire website */
+  --default-color: #000000;
+  /* Default color used for the majority of the text content across the entire website */
   --heading-color: #000000;
-  --heading-color1: #000000; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #FFF411; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #000000; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #000000; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --heading-color1: #000000;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #FFF411;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #000000;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #000000;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #000000;  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #FFF411; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #060606; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #000000; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #000000;
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #ffffff;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #FFF411;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #060606;
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #000000;
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -31,7 +43,7 @@
 .light-background {
   --background-color: #f9f9f9;
   --surface-color: #ffffff;
-} 
+}
 
 .dark-background {
   --background-color: #FFF411;
@@ -53,10 +65,9 @@
   position: fixed;
   width: 50px;
   height: 50px;
-  bottom: 130px;
+  bottom: 70px;
   right: 10px;
   background-color: #25d366;
-  color: white;
   border-radius: 50%;
   text-align: center;
   font-size: 30px;
@@ -69,10 +80,20 @@
   transition: all 0.3s ease;
 }
 
-.whatsapp-float:hover {
-  background-color: #1ebe5d; /* solo cambia color */
-  font-size: 35px; /* agranda el icono, no el botón */
+.whatsapp-float i {
+  color: #ffffff; /* Color inicial del ícono */
+  transition: color 0.3s ease;
 }
+
+.whatsapp-float:hover {
+  background-color: #25d366; /* El fondo no cambia */
+  font-size: 35px; /* Agranda el icono */
+}
+
+.whatsapp-float:hover i {
+  color: #ffffff; /* Ícono en blanco */
+}
+
 
 
 /*--------------------------------------------------------------
@@ -95,61 +116,77 @@ body {
 }
 
 
-.float{
-  position:fixed;
-  width:70px;
-  height:70px;
-  bottom:40px;
-  left:40px;
-  background-color:#25d366;
-  color:#FFF;
-  border-radius:50px;
-  text-align:center;
-  font-size:30px;
+.float {
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  bottom: 40px;
+  left: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
   box-shadow: 2px 2px 3px #999;
-  z-index:100;
+  z-index: 100;
 }
+
 .float:hover {
   text-decoration: none;
   color: #FFF;
-  background-color:#1ab152;
+  background-color: #1ab152;
   animation: shake 3s;
   animation-iteration-count: infinite;
 }
 
-.my-float{
-  margin-top:20px;
+.my-float {
+  margin-top: 20px;
 }
 
 .icono {
-  width: 48px; /* Ajusta el tamaño */
-  height: 48px; /* Ajusta el tamaño */
+  width: 48px;
+  /* Ajusta el tamaño */
+  height: 48px;
+  /* Ajusta el tamaño */
   background-image: url('../img/pipeline.png');
-  background-size: contain; /* Para que la imagen se ajuste al div */
-  background-repeat: no-repeat; /* Para que no se repita */
-  padding-right: 15px;
-}
-.icono2 {
-  width: 48px; /* Ajusta el tamaño */
-  height: 48px; /* Ajusta el tamaño */
-  background-image: url('../img/valve.png');
-  background-size: contain; /* Para que la imagen se ajuste al div */
-  background-repeat: no-repeat; /* Para que no se repita */
-  padding-right: 15px;
-}
-.icono3 {
-  width: 48px; /* Ajusta el tamaño */
-  height: 48px; /* Ajusta el tamaño */
-  background-image: url('../img/screw.png');
-  background-size: contain; /* Para que la imagen se ajuste al div */
-  background-repeat: no-repeat; /* Para que no se repita */
+  background-size: contain;
+  /* Para que la imagen se ajuste al div */
+  background-repeat: no-repeat;
+  /* Para que no se repita */
   padding-right: 15px;
 }
 
-#accesorioImg{
+.icono2 {
+  width: 48px;
+  /* Ajusta el tamaño */
+  height: 48px;
+  /* Ajusta el tamaño */
+  background-image: url('../img/valve.png');
+  background-size: contain;
+  /* Para que la imagen se ajuste al div */
+  background-repeat: no-repeat;
+  /* Para que no se repita */
+  padding-right: 15px;
+}
+
+.icono3 {
+  width: 48px;
+  /* Ajusta el tamaño */
+  height: 48px;
+  /* Ajusta el tamaño */
+  background-image: url('../img/screw.png');
+  background-size: contain;
+  /* Para que la imagen se ajuste al div */
+  background-repeat: no-repeat;
+  /* Para que no se repita */
+  padding-right: 15px;
+}
+
+#accesorioImg {
   width: 75%;
 }
-#tuberiaImg{
+
+#tuberiaImg {
   width: 75%;
 }
 
@@ -157,7 +194,8 @@ body {
   float: left;
   width: 50%;
   padding: 1px;
-}  
+}
+
 .row::after {
   content: "";
   clear: both;
@@ -543,18 +581,20 @@ h6 {
 
 .footer .social-links {
   display: flex;
-  justify-content: space-evenly;
-  margin: 0 30% 20px 30%;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente si es necesario */
+  gap: 15px; /* Espacio uniforme entre iconos */
 }
 
-.footer .social-links img{
+
+.footer .social-links img {
   width: 100%;
   margin: 0 4px;
   border-radius: 50%;
   transition: 0.3s;
 }
 
-.footer .social-links img:hover{
+.footer .social-links img:hover {
   width: 130%;
   margin: 0 4px;
   border-radius: 50%;
@@ -580,7 +620,7 @@ h6 {
 
 .footer .copyright {
   padding-top: 25px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid #fff; /* Línea blanca visible */
 }
 
 .footer .credits {
@@ -595,14 +635,15 @@ h6 {
   position: fixed;
   visibility: hidden;
   opacity: 0;
-  right: 10px; 
-  bottom: 60px; 
+  right: 10px;
+  bottom: 60px;
   z-index: 99999;
   background-color: var(--accent-color);
-  width: 50px; 
+  width: 50px;
   height: 50px;
   border-radius: 50%;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* misma sombra */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  /* misma sombra */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -610,9 +651,10 @@ h6 {
 }
 
 .scroll-top i {
-  font-size: 30px; 
+  font-size: 30px;
   color: var(--heading-color1);
   line-height: 0;
+  bottom: 10px;
 }
 
 .scroll-top:hover {
@@ -623,7 +665,7 @@ h6 {
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
-  bottom: 60px; 
+  bottom: 10px;
 }
 
 /*--------------------------------------------------------------
@@ -749,7 +791,7 @@ section,
   align-items: center;
   margin-top: -60px;
 }
-  
+
 
 .hero .carousel-container {
   display: flex;
@@ -762,6 +804,7 @@ section,
   padding-top: 20px;
 
 }
+
 .hero h2 {
   margin-bottom: 30px;
   font-size: 48px;
@@ -791,12 +834,15 @@ section,
   width: auto;
   height: auto;
 }
+
 .hero .carousel-control-next {
-  right: -130px; /* mueve el botón next 30px fuera del contenedor a la derecha */
+  right: -130px;
+  /* mueve el botón next 30px fuera del contenedor a la derecha */
 }
 
 .hero .carousel-control-prev {
-  left: -130px; /* mueve el botón prev 30px fuera del contenedor a la izquierda */
+  left: -130px;
+  /* mueve el botón prev 30px fuera del contenedor a la izquierda */
 }
 
 .hero .btn-get-started {
@@ -834,13 +880,15 @@ section,
 /* Altura más alta solo en móviles */
 @media (max-width: 768px) {
   .carousel-img {
-    height: 300px; /* Ajusta este valor a lo que quieras */
-    object-fit: cover; /* Mantiene la proporción sin deformar */
+    height: 300px;
+    /* Ajusta este valor a lo que quieras */
+    object-fit: cover;
+    /* Mantiene la proporción sin deformar */
   }
 
   .hero h2 {
     font-size: 28px;
-  }       
+  }
 }
 
 .hero .hero-waves {
@@ -1003,7 +1051,8 @@ section,
     line-height: 1;
     font-size: 36px;
   }
-  .carousel-indicators{
+
+  .carousel-indicators {
     display: none;
   }
 }
@@ -1162,13 +1211,14 @@ section,
   font-family: var(--heading-font);
 }
 
-.visita_nuestra_tienda{
+.visita_nuestra_tienda {
   color: var(--default-color);
 }
 
-.visita_nuestra_tienda:hover{
+.visita_nuestra_tienda:hover {
   color: var(--heading-color1);
 }
+
 .portfolio .portfolio-filters li:hover,
 .portfolio .portfolio-filters li.filter-active {
   color: var(--heading-color1);
@@ -1183,7 +1233,7 @@ section,
   margin-right: 0;
 }
 
-.enlace-tienda_cont_a{
+.enlace-tienda_cont_a {
   color: var(--default-color);
   font-weight: 500;
   font-size: 15px;
@@ -1191,7 +1241,7 @@ section,
   transition: color 0.3s;
 }
 
-.enlace-tienda_cont_a:hover{
+.enlace-tienda_cont_a:hover {
   color: var(--heading-color1);
   font-weight: 500;
   font-size: 15px;
@@ -1715,7 +1765,7 @@ section,
 }
 
 .contact .info-item:hover i {
-  background-color: #d1d1d1 ;
+  background-color: #d1d1d1;
   color: var(--contrast-color);
 }
 
@@ -2661,6 +2711,7 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
 }
+
 /*--------------------------------------------------------------
 # Productos
 --------------------------------------------------------------*/
@@ -2696,6 +2747,7 @@ section,
   font-size: 16px;
   margin: 10px 0 15px;
 }
+
 /*--------------------------------------------------------------
 # boton productos
 --------------------------------------------------------------*/
@@ -2713,6 +2765,7 @@ section,
   color: rgb(0, 0, 0);
   border-color: #FFF411;
 }
+
 /*--------------------------------------------------------------
 # informacion
 --------------------------------------------------------------*/
@@ -2738,146 +2791,165 @@ p {
 # tabs
 --------------------------------------------------------------*/
 .nav-tabs .nav-link {
-  background-color: #FFF411;   
-  color: white;               /* Texto blanco */
-  border: none;
+  background-color: transparent;     /* Fondo transparente */
+  color: #000000;                     /* Texto amarillo */
+  border: 2px solid #FFF411;          /* Borde amarillo */
   text-align: center;
   transition: background-color 0.3s, color 0.3s;
 }
 
-
+/* Hover */
 .nav-tabs .nav-link:hover {
-  background-color: #ffffff;  
-  color: rgb(255, 255, 255);
+  background-color: #FFF411; /* Fondo amarillo */
+  color: #000000;            /* Texto negro */
 }
 
-/* Tab activo (opcional: más oscuro para diferenciar) */
+/* Activo */
 .nav-tabs .nav-link.active {
-  background-color: #ffffff;  
-  color: white;
+  background-color: #FFF411; /* Fondo amarillo */
+  color: #000000;            /* Texto negro */
+  border-color: #FFF411;
 }
+
 
 /*--------------------------------------------------------------
 # banner
 --------------------------------------------------------------*/
 .banner {
-    position: relative;
-    max-width: 100%;
-    height: 80vh;
-    margin: 0;
-    overflow: hidden;
+  position: relative;
+  max-width: 100%;
+  height: 80vh;
+  margin: 0;
+  overflow: hidden;
 }
 
 .slides {
-    display: none;
-    width: 100%;
-    height: 100%;
-    background-size: contain; 
-    background-position: center;
-    position: absolute;
-    opacity: 0;
-    transition: opacity 1s ease;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 
 .active {
-    display: block;
-    opacity: 1;
+  display: block;
+  opacity: 1;
 }
 
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 50px;
-    color: white;
-    background-color: #00000000;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 2;
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  color: white;
+  background-color: #00000000;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
 }
 
 .prev {
-    left: 23px;
+  left: 23px;
 }
 
 .next {
-    right: 23px;
+  right: 23px;
 }
 
 .dots {
-    position: absolute;
-    bottom: 23px;
-    width: 100%;
-    text-align: center;
+  position: absolute;
+  bottom: 23px;
+  width: 100%;
+  text-align: center;
 }
 
 .dots span {
-    display: inline-block;
-    height: 14px;
-    width: 14px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .active-dot {
-    background-color: #717171;
+  background-color: #717171;
 }
 
 .text {
-    font-family: 'Montserrat', sans-serif;
-    position: absolute;
-    bottom: 95px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    font-size: 50px;
-    font-weight: bold;
-    text-align: center; /* Centramos el texto */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  bottom: 95px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  /* Centramos el texto */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 /*--------------------------------------------------------------
 # responsive banner
 --------------------------------------------------------------*/
 @media (max-width: 1280px) {
-    .banner {
-        height: 230px;
-    }
+  .banner {
+    height: 230px;
+  }
 
-    .text {
-        font-size: 23px;
-        bottom: 50px;
-    }
-    
-    .prev, .next {
-        font-size: 23px;
-        padding: 8px;
-    }
+  .text {
+    font-size: 23px;
+    bottom: 50px;
+  }
 
-    .dots span {
-        height: 14px;
-        width: 14px;
-    }
+  .prev,
+  .next {
+    font-size: 23px;
+    padding: 8px;
+  }
+
+  .dots span {
+    height: 14px;
+    width: 14px;
+  }
 }
-        
+
 @keyframes fade {
-    0% { opacity: 0; }
-    10% { opacity: 1; }
-    90% { opacity: 1; }
-    100% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .slides {
-    animation: fade 6s infinite;
+  animation: fade 6s infinite;
 }
+
 .container1 {
   margin-left: 8%;
   margin-right: 8%;
-  width: fit-content; /* o un ancho fijo como 300px */
+  width: fit-content;
+  /* o un ancho fijo como 300px */
 }
+
 /* Asegura que las imágenes mantengan proporción en todas las pantallas */
 .carousel-inner img {
   width: 150%;
@@ -2891,17 +2963,21 @@ body {
   margin: 0;
   background-color: #ffffff;
 }
+
 .banner-title {
   font-size: 20 px;
   font-weight: bold;
-  color: #FFD700; /* dorado */
+  color: #FFD700;
+  /* dorado */
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
 }
+
 .banner-subtitle {
   font-size: 1.2rem;
   color: #fff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
+
 /*--------------------------------------------------------------
 # productos
 --------------------------------------------------------------*/
@@ -2931,6 +3007,7 @@ body {
   border-radius: 8px;
   display: block;
 }
+
 /*--------------------------------------------------------------
 # place hover para boton flotante cotizr
 --------------------------------------------------------------*/
@@ -2964,6 +3041,7 @@ body {
   font-size: 1.1rem;
   color: rgb(0, 0, 0);
 }
+
 /*--------------------------------------------------------------
 # product detalle
 --------------------------------------------------------------*/
@@ -2978,7 +3056,7 @@ body {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .product-modal-content {
@@ -3019,13 +3097,17 @@ body {
   color: #333;
   cursor: pointer;
 }
+
 .text-amarillo {
-  color: #000000 !important; /* o el tono que prefieras */
+  color: #000000 !important;
+  /* o el tono que prefieras */
 }
+
 .custom-btn {
   display: inline-block;
-  padding: 10px 20px;
-  background-color: #FFF411; /* Dorado */
+  padding: 12px 20px;
+  background-color: #FFF411;
+  /* Dorado */
   color: #000000;
   font-weight: bold;
   border: none;
@@ -3045,10 +3127,18 @@ body {
   text-decoration: none;
   color: #000000;
 }
+
+#features-tab-1 .custom-btn,
+#features-tab-2 .custom-btn,
+#features-tab-3 .custom-btn,
+#features-tab-4 .custom-btn {
+  margin-top: 30px;
+}
 .map-container {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+  padding-bottom: 56.25%;
+  /* Relación de aspecto 16:9 */
   height: 0;
   overflow: hidden;
   border-radius: 8px;
@@ -3062,15 +3152,19 @@ body {
   height: 100%;
   border: 0;
 }
+
 @media (max-width: 767px) {
   .nav-tabs .nav-item {
-    margin-bottom: 20px; /* separación vertical */
+    margin-bottom: 20px;
+    /* separación vertical */
   }
 }
+
 .numero-telefono {
   color: black !important;
 
 }
+
 /*--------------------------------------------------------------
 # footer
 --------------------------------------------------------------*/
@@ -3084,8 +3178,8 @@ body {
   margin-bottom: 15px;
 }
 
-.footer-left, 
-.footer-center, 
+.footer-left,
+.footer-center,
 .footer-right {
   flex: 1 1 auto;
   text-align: center;
@@ -3106,9 +3200,9 @@ body {
   .footer-left,
   .footer-center,
   .footer-right {
-    display: flex;            
-    justify-content: center;  
-    width: 100%;              
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 
   .footer-center {
@@ -3123,10 +3217,11 @@ body {
     order: 3;
   }
 }
+
 /*--------------------------------------------------------------
 # prelaoader MAYGAS
 --------------------------------------------------------------*/
-  /* Preloader */
+/* Preloader */
 #preloader1 {
   position: fixed;
   top: 0;
@@ -3141,8 +3236,10 @@ body {
 }
 
 #preloader1 img {
-  width: 500px; /* Puedes aumentar o reducir este valor según lo que necesites */
-  max-width: 90%; /* Para que no se desborde en pantallas pequeñas */
+  width: 500px;
+  /* Puedes aumentar o reducir este valor según lo que necesites */
+  max-width: 90%;
+  /* Para que no se desborde en pantallas pequeñas */
   height: auto;
 }
 
