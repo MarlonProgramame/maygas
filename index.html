@@ -988,48 +988,12 @@
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11009029057">
   </script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'AW-11009029057');
-
-    function openModal(id) {
-      document.getElementById(id).style.display = 'block';
-    }
-
-    function closeModal(id) {
-      document.getElementById(id).style.display = 'none';
-    }
-
-    window.onclick = function (event) {
-      const modals = document.querySelectorAll('.product-modal');
-      modals.forEach(modal => {
-        if (event.target === modal) {
-          modal.style.display = "none";
-        }
-      });
-    };
-  </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Espera 5 segundos antes de ocultar el preloader
-      setTimeout(function () {
-        document.getElementById("preloader1").classList.add("oculto");
-
-        // Espera el tiempo de la transición antes de quitarlo del DOM
-        setTimeout(function () {
-          document.getElementById("preloader1").style.display = "none";
-        }, 500); // coincide con transition: opacity 0.50s
-      }, 3000); // tiempo que se muestra: 5 segundos
-    });
-  </script>
-
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/banner.js"></script>
+  <script  src="assets/js/preloader.js"></script>
+  <script src="assets/js/modal.js"></script>
 
 </body>
 
