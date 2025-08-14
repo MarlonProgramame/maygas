@@ -760,7 +760,7 @@ section,
 
 .section-title h2::after {
   content: "";
-  width: 200px;
+  width: 500px;
   height: 2px;
   display: inline-block;
   background: var(--accent-color);
@@ -2791,25 +2791,27 @@ p {
 # tabs
 --------------------------------------------------------------*/
 .nav-tabs .nav-link {
-  background-color: transparent;     /* Fondo transparente */
-  color: #000000;                     /* Texto amarillo */
-  border: 2px solid #FFF411;          /* Borde amarillo */
+  background-color: transparent;      /* Fondo transparente */
+  color: #000000;                      /* Texto negro */
+  border: none;                        /* Sin borde por defecto */
+  border-bottom: 2px solid #FFF411;    /* Solo borde inferior */
   text-align: center;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s, border-bottom-color 0.3s;
 }
 
 /* Hover */
 .nav-tabs .nav-link:hover {
-  background-color: #FFF411; /* Fondo amarillo */
-  color: #000000;            /* Texto negro */
+  background-color: #FFF411;           /* Fondo amarillo */
+  color: #000000;                      /* Texto negro */
 }
 
 /* Activo */
 .nav-tabs .nav-link.active {
-  background-color: #FFF411; /* Fondo amarillo */
-  color: #000000;            /* Texto negro */
-  border-color: #FFF411;
+  background-color: #FFF411;           /* Fondo amarillo */
+  color: #000000;                      /* Texto negro */
+  border-bottom: 2px solid #FFF411;    /* Mantener solo borde inferior */
 }
+
 
 
 /*--------------------------------------------------------------
@@ -3252,3 +3254,98 @@ body {
   opacity: 0;
   pointer-events: none;
 }
+
+/*--------------------------------------------------------------
+# CARRUCEL PARA IMAGENES DE NOSOTROS
+--------------------------------------------------------------*/
+/* Ajuste del carrusel para que quede proporcional al texto */
+.col-lg-6 .carousel {
+  max-height: 400px; /* altura máxima del carrusel */
+  overflow: hidden;
+}
+
+.col-lg-6 .carousel-inner img {
+  height: 100%; /* la imagen ocupa toda la altura del carrusel */
+  width: auto;  /* mantiene proporción */
+  object-fit: contain;
+}
+
+/* Miniaturas más pequeñas y proporcionales al carrusel */
+.col-lg-6 .thumb {
+  height: 60px; /* altura proporcional al carrusel */
+  object-fit: cover;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border 0.3s;
+}
+
+.col-lg-6 .thumb:hover {
+  border: 2px solid #FFD700;
+}
+
+/* Contenedor de miniaturas */
+.miniaturas {
+  display: flex;
+  justify-content: center; /* centradas */
+  gap: 0; /* sin espacio entre ellas */
+  margin-top: 10px; /* separación con el carrusel */
+}
+
+/* Miniaturas */
+.thumb {
+  height: 60px; /* ajusta proporcional al carrusel */
+  object-fit: cover;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border 0.3s;
+}
+
+.thumb:hover {
+  border: 2px solid #FFD700; /* borde dorado al pasar el mouse */
+}
+
+/* Ajuste responsivo */
+@media (max-width: 991px) {
+  .thumb {
+    height: 50px;
+  }
+}
+
+/* Cambiar color de las flechas del carrusel a amarillo */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none; /* quitar el ícono por defecto */
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  position: relative;
+}
+
+/* Flecha izquierda */
+.carousel-control-prev-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  border-top: 3px solid #FFD700; /* línea superior de la flecha */
+  border-left: 3px solid #FFD700; /* línea izquierda de la flecha */
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* Flecha derecha */
+.carousel-control-next-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  border-top: 3px solid #FFD700; /* línea superior de la flecha */
+  border-right: 3px solid #FFD700; /* línea derecha de la flecha */
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+
+
