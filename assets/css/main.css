@@ -9,6 +9,8 @@
   --background-color: #ffffff;
   /* Background color for the entire website, including individual sections */
   --background-color1: #000000;
+  --background-color2: #ffcc00;
+  --background-color3: #FFF411;
   --default-color: #000000;
   /* Default color used for the majority of the text content across the entire website */
   --heading-color: #000000;
@@ -107,7 +109,7 @@ body {
 
 .btn {
   color: var(--heading-color1);
-  background-color: #FFF411;
+   background: linear-gradient(45deg, #ffcc00, #FFF411); 
 }
 
 .btn:hover {
@@ -638,7 +640,7 @@ h6 {
   right: 10px;
   bottom: 60px;
   z-index: 99999;
-  background-color: var(--accent-color);
+  background: linear-gradient(45deg, #ffcc00, #FFF411); 
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -783,7 +785,7 @@ section,
   width: 100%;
   overflow: hidden;
   position: relative;
-  background: linear-gradient(0deg, var(--background-color) 0%, color-mix(in srgb, var(--background-color) 90%, white 10%) 100%);
+  background: linear-gradient(0deg, var(--background-color2) 0%, color-mix(in srgb, var(--background-color3) 90%, white 10%) 100%);
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -1221,8 +1223,7 @@ section,
 
 .portfolio .portfolio-filters li:hover,
 .portfolio .portfolio-filters li.filter-active {
-  color: var(--heading-color1);
-  background-color: var(--accent-color);
+  background: linear-gradient(45deg, #ffcc00, #FFF411); 
 }
 
 .portfolio .portfolio-filters li:first-child {
@@ -2761,9 +2762,9 @@ section,
 }
 
 .quote-button:hover {
-  background-color: #FFF411;
+   background: linear-gradient(45deg, #ffcc00, #FFF411); 
   color: rgb(0, 0, 0);
-  border-color: #FFF411;
+   background: linear-gradient(45deg, #ffcc00, #FFF411); 
 }
 
 /*--------------------------------------------------------------
@@ -2801,13 +2802,13 @@ p {
 
 /* Hover */
 .nav-tabs .nav-link:hover {
-  background-color: #FFF411;           /* Fondo amarillo */
+   background: linear-gradient(45deg, #ffcc00, #FFF411);           /* Fondo amarillo */
   color: #000000;                      /* Texto negro */
 }
 
 /* Activo */
 .nav-tabs .nav-link.active {
-  background-color: #FFF411;           /* Fondo amarillo */
+  background: linear-gradient(45deg, #ffcc00, #FFF411);               /* Fondo amarillo */
   color: #000000;                      /* Texto negro */
   border-bottom: 2px solid #FFF411;    /* Mantener solo borde inferior */
 }
@@ -3019,7 +3020,7 @@ body {
   top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #FFF411;
+  background: linear-gradient(45deg, #ffcc00, #FFF411); 
   color: #000;
   border: none;
   border-radius: 25px;
@@ -3080,7 +3081,7 @@ body {
 }
 
 .modal-quote-button {
-  background-color: #FFF411;
+   background: linear-gradient(45deg, #ffcc00, #FFF411); 
   color: #000;
   border: none;
   border-radius: 25px;
@@ -3108,8 +3109,7 @@ body {
 .custom-btn {
   display: inline-block;
   padding: 12px 20px;
-  background-color: #FFF411;
-  /* Dorado */
+  background: linear-gradient(45deg, #ffcc00, #FFF411); 
   color: #000000;
   font-weight: bold;
   border: none;
@@ -3124,7 +3124,7 @@ body {
 }
 
 .custom-btn:hover {
-  background-color: #FFF411;
+   background: linear-gradient(45deg, #ffcc00, #FFF411); 
   transform: translateY(-2px);
   text-decoration: none;
   color: #000000;
