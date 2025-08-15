@@ -552,7 +552,24 @@ h6 {
     display: block;
   }
 }
+.navmenu a {
+  position: relative; /* Necesario para posicionar el ::after */
+}
 
+.navmenu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px; /* grosor de la línea */
+  background-color: var(--accent-color); /* color de la línea */
+  transition: width 0.3s ease;
+}
+
+.navmenu a:hover::after {
+  width: 100%;
+}
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
