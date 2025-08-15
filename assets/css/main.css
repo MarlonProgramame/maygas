@@ -2802,7 +2802,7 @@ p {
 
 /* Hover */
 .nav-tabs .nav-link:hover {
-   background: linear-gradient(45deg, #ffcc00, #FFF411);           /* Fondo amarillo */
+  background-color: #fffcc8;           /* Fondo amarillo */
   color: #000000;                      /* Texto negro */
 }
 
