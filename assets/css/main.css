@@ -2734,6 +2734,10 @@ section,
 # Productos
 --------------------------------------------------------------*/
 .product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
   text-align: center;
   padding: 20px;
   border: 1px solid #eee;
@@ -2764,7 +2768,23 @@ section,
   color: #000000;
   font-size: 16px;
   margin: 10px 0 15px;
+  min-height: 40px; /* asegura misma altura para nombres */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
+
+/* hace que las tarjetas de cada fila sean iguales en altura */
+.row.gy-4.isotope-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row.gy-4.isotope-container > div {
+  display: flex;
+}
+
 
 /*--------------------------------------------------------------
 # boton productos
