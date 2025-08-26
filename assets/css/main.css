@@ -80,21 +80,24 @@
   align-items: center;
   text-decoration: none;
   transition: all 0.3s ease;
+  overflow: hidden; /* para que la imagen no se salga */
 }
 
 .whatsapp-float i {
-  color: #ffffff; /* Color inicial del ícono */
-  transition: color 0.3s ease;
-}
-
-.whatsapp-float:hover {
-  background-color: #25d366; /* El fondo no cambia */
-  font-size: 35px; /* Agranda el icono */
+  color: #ffffff; /* Icono normal */
+  transition: opacity 0.3s ease;
+  z-index: 2;
 }
 
 .whatsapp-float:hover i {
-  color: #ffffff; /* Ícono en blanco */
+  opacity: 0; /* Oculta el icono en hover */
 }
+
+.whatsapp-float:hover {
+  background: url("../img/Pagina_principal/Nico.png") no-repeat center center;
+  background-size: cover; /* ajusta la imagen al círculo */
+}
+
 
 
 
