@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Red Contra Incendio</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <!-- Favicons -->
+    <link href="assets/img/icono.webp" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+    <header id="header" class="header d-flex align-items-center">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <img src="assets/img/Pagina_principal/MAYGAS.webp" width="77%" height="auto" alt="">
+                <!--<h1 class="sitename">Selecao</h1>-->
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+        </div>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+        <!-- Botón flotante de WhatsApp a la izquierda -->
+        <a href="https://api.whatsapp.com/send/?phone=573108194951&text&type=phone_number&app_absent=0"
+            class="whatsapp-float" target="_blank" title="Escríbenos por WhatsApp">
+            <i class="fa fa-whatsapp"></i>
+        </a>
+    </header>
+    <!-- CODIFICACION DE LOS PRODUCTOS ESTABLECIDOS CON SU NOMBRE Y BOTON PARA COTIZAR EL PRODUCTO Y SE REDIRECCIONAMIENTO A LA PAGINA PRINCIPAL DE LA EMPRESA-->
+
+    <main class="main">
+        <section id="portfolio" class="portfolio section">
+            <div class="container section-title" data-aos="fade-up">
+                <p>Nuestros Productos</p>
+            </div>
+
+            <!-- Barra de búsqueda -->
+            <div class="container mb-4">
+                <input type="text" id="searchInput" class="form-control" placeholder="Buscar producto...">
+            </div>
+
+            <!-- ===== Sidebar SOLO categorías ===== -->
+            <div class="container mb-4">
+                <nav class="category-bar">
+                    <ul class="nav justify-content-center flex-wrap">
+                        <li class="nav-item"><a class="nav-link" href="#">Tubería y Accesorios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Registros y Válvulas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Acabados</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Impermeabilizantes y Aditivos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Bricolaje</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Geosistemas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Red Contra Incendio</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="container">
+                <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+                    <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+                        <!-- Producto ejemplo -->
+                        <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-app">
+                            <div class="product-card">
+                                <div class="image-container">
+                                    <img src="assets/img/Pagina_principal/productosinImagen.png"
+                                        class="img-fluid product-image" alt="Tubo Rieber C900"
+                                        onclick="openModal('modal-producto-1')">
+                                    <a href="https://nuruena.com.co/producto/vista/777-tubo-reiber-c-900-rde18"
+                                        target="_blank">
+                                        <button class="quote-button">Cotizar</button>
+                                    </a>
+                                </div>
+                                <h4 class="product-name">PRODUCTO EJEMPLO</h4>
+                            </div>
+                        </div>
+
+                        <!-- ------------------------- --><!-- Producto 2 --><!-- ------------------------- -->
+                        <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-app">
+                            <div class="product-card">
+                                <div class="image-container">
+                                    <img src="assets/img/Pagina_principal/productosinImagen.png"
+                                        class="img-fluid product-image" alt="Tubo PE100"
+                                        onclick="openModal('modal-producto-2')">
+                                    <a href="https://nuruena.com.co/categoria/productos/7-red-contra-incendio/104-red-contra-incendio"
+                                        target="_blank">
+                                        <button class="quote-button">Cotizar</button>
+                                    </a>
+                                </div>
+                                <h4 class="product-name">PRODUCTO EJEMPLO</h4>
+                            </div>
+                        </div>
+                        <!-- ------------------------- --><!-- Producto 3 --><!-- ------------------------- -->
+                        <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-product">
+                            <div class="product-card">
+                                <div class="image-container">
+                                    <img src="assets/img/Pagina_principal/productosinImagen.png"
+                                        class="img-fluid product-image" alt="Tubo PE100"
+                                        onclick="openModal('modal-producto-3')">
+                                    <a href="https://nuruena.com.co/producto/vista/521-codo-ranurado-ul"
+                                        target="_blank">
+                                        <button class="quote-button">Cotizar</button>
+                                    </a>
+                                </div>
+                                <h4 class="product-name">PRODUCTO EJEMPLO</h4>
+                            </div>
+                        </div>
+
+                        <!-- ------------------------- --><!-- Producto 4 --><!-- ------------------------- -->
+                        <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-branding">
+                            <div class="product-card">
+                                <div class="image-container">
+                                    <img src="assets/img/Pagina_principal/productosinImagen.png"
+                                        class="img-fluid product-image" alt="Registro Globo"
+                                        onclick="openModal('modal-producto-4')">
+                                    <a href="https://nuruena.com.co/categoria/productos/7-red-contra-incendio/104-red-contra-incendio"
+                                        target="_blank">
+                                        <button class="quote-button">Cotizar</button>
+                                    </a>
+                                </div>
+                                <h4 class="product-name">PRODUCTO EJEMPLO</h4>
+                            </div>
+                        </div>
+
+                        <!-- ------------------------- --><!-- Producto 5 --><!-- ------------------------- -->
+                        <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-product">
+                            <div class="product-card">
+                                <div class="image-container">
+                                    <img src="assets/img/Pagina_principal/productosinImagen.png"
+                                        class="img-fluid product-image" alt="Tee ranurada ul"
+                                        onclick="openModal('modal-producto-5')">
+                                    <a href="https://nuruena.com.co/producto/vista/530-tee-ranurada-ul" target="_blank">
+                                        <button class="quote-button">Cotizar</button>
+                                    </a>
+                                </div>
+                                <h4 class="product-name">PRODUCTO EJEMPLO</h4>
+                            </div>
+                        </div>
+
+                        <!-- ------------------------- --><!-- Producto 6 --><!-- ------------------------- -->
+                        <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-branding">
+                            <div class="product-card">
+                                <div class="image-container">
+                                    <img src="assets/img/Pagina_principal/productosinImagen.png"
+                                        class="img-fluid product-image" alt="Válvula cortina OS&Y ranurada"
+                                        onclick="openModal('modal-producto-6')">
+                                    <a href="https://nuruena.com.co/producto/vista/743-valvula-cortina-os&y--ranurada"
+                                        target="_blank">
+                                        <button class="quote-button">Cotizar</button>
+                                    </a>
+                                </div>
+                                <h4 class="product-name">PRODUCTO EJEMPLO</h4>
+                            </div>
+                        </div>
+
+                        <!-- ------------------------- --><!-- Producto 7 --><!-- ------------------------- -->
+                        <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-app">
+                            <div class="product-card">
+                                <div class="image-container">
+                                    <img src="assets/img/Pagina_principal/productosinImagen.png"
+                                        class="img-fluid product-image" alt="Tubo SCH 10 roja"
+                                        onclick="openModal('modal-producto-7')">
+                                    <a href="https://nuruena.com.co/categoria/productos/7-red-contra-incendio/104-red-contra-incendio"
+                                        target="_blank">
+                                        <button class="quote-button">Cotizar</button>
+                                    </a>
+                                </div>
+                                <h4 class="product-name">PRODUCTO EJEMPLO</h4>
+                            </div>
+                        </div>
+
+                        <!-- ------------------------- --><!-- Producto 8 --><!-- ------------------------- -->
+                        <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-product">
+                            <div class="product-card">
+                                <div class="image-container">
+                                    <img src="assets/img/Pagina_principal/productosinImagen.png"
+                                        class="img-fluid product-image" alt="Tapón copa ranurado ul"
+                                        onclick="openModal('modal-producto-8')">
+                                    <a href="https://nuruena.com.co/producto/vista/527-tapon-copa-ranurado-ul"
+                                        target="_blank">
+                                        <button class="quote-button">Cotizar</button>
+                                    </a>
+                                </div>
+                                <h4 class="product-name">PRODUCTO EJEMPLO</h4>
+                            </div>
+                        </div>
+
+                        <!-- ------------------------- --><!-- Producto 9 --><!-- ------------------------- -->
+                        <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-branding">
+                            <div class="product-card">
+                                <div class="image-container">
+                                    <img src="assets/img/Pagina_principal/productosinImagen.png"
+                                        class="img-fluid product-image" alt="Válvula mariposa HD supervisada"
+                                        onclick="openModal('modal-producto-9')">
+                                    <a href="https://nuruena.com.co/producto/vista/742-valvula-mariposa-hd-supervisada"
+                                        target="_blank">
+                                        <button class="quote-button">Cotizar</button>
+                                    </a>
+                                </div>
+                                <h4 class="product-name">PRODUCTO EJEMPLO</h4>
+                            </div>
+                        </div>
+
+                        <!-- ------------------------- --><!-- Producto 10 --><!-- ------------------------- -->
+                        <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-app">
+                            <div class="product-card">
+                                <div class="image-container">
+                                    <img src="assets/img/Pagina_principal/productosinImagen.png"
+                                        class="img-fluid product-image" alt="Tubo SCH 40 roja"
+                                        onclick="openModal('modal-producto-10')">
+                                    <a href="https://nuruena.com.co/categoria/productos/7-red-contra-incendio/104-red-contra-incendio"
+                                        target="_blank">
+                                        <button class="quote-button">Cotizar</button>
+                                    </a>
+                                </div>
+                                <h4 class="product-name">PRODUCTO EJEMPLO</h4>
+                            </div>
+                        </div>
+
+                        <!-- ------------------------- --><!-- Producto 11 --><!-- ------------------------- -->
+                        <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-product">
+                            <div class="product-card">
+                                <div class="image-container">
+                                    <img src="assets/img/Pagina_principal/productosinImagen.png"
+                                        class="img-fluid product-image" alt="Flanche - brida ranurada"
+                                        onclick="openModal('modal-producto-11')">
+                                    <a href="https://nuruena.com.co/producto/vista/518-brida-ranurada-ul"
+                                        target="_blank">
+                                        <button class="quote-button">Cotizar</button>
+                                    </a>
+                                </div>
+                                <h4 class="product-name">PRODUCTO EJEMPLO</h4>
+                            </div>
+                        </div>
+
+                        <!-- ------------------------- --><!-- Producto 12 --><!-- ------------------------- -->
+                        <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-product">
+                            <div class="product-card">
+                                <div class="image-container">
+                                    <img src="assets/img/Pagina_principal/productosinImagen.png"
+                                        class="img-fluid product-image" alt="Derivación strap"
+                                        onclick="openModal('modal-producto-12')">
+                                    <a href="https://nuruena.com.co/categoria/productos/7-red-contra-incendio/104-red-contra-incendio"
+                                        target="_blank">
+                                        <button class="quote-button">Cotizar</button>
+                                    </a>
+                                </div>
+                                <h4 class="product-name">PRODUCTO EJEMPLO</h4>
+                            </div>
+                        </div>
+                        <!-- ------------------------- --><!-- Producto 13 --><!-- ------------------------- -->
+                        <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-product">
+                            <div class="product-card">
+                                <div class="image-container">
+                                    <img src="assets/img/Pagina_principal/productosinImagen.png"
+                                        class="img-fluid product-image" alt="Derivación strap"
+                                        onclick="openModal('modal-producto-12')">
+                                    <a href="https://nuruena.com.co/categoria/productos/7-red-contra-incendio/104-red-contra-incendio"
+                                        target="_blank">
+                                        <button class="quote-button">Cotizar</button>
+                                    </a>
+                                </div>
+                                <h4 class="product-name">PRODUCTO EJEMPLO</h4>
+                            </div>
+                        </div>
+                        <!-- ------------------------- --><!-- Producto 14 --><!-- ------------------------- -->
+                        <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-product">
+                            <div class="product-card">
+                                <div class="image-container">
+                                    <img src="assets/img/Pagina_principal/productosinImagen.png"
+                                        class="img-fluid product-image" alt="Derivación strap"
+                                        onclick="openModal('modal-producto-12')">
+                                    <a href="https://nuruena.com.co/categoria/productos/7-red-contra-incendio/104-red-contra-incendio"
+                                        target="_blank">
+                                        <button class="quote-button">Cotizar</button>
+                                    </a>
+                                </div>
+                                <h4 class="product-name">PRODUCTO EJEMPLO</h4>
+                            </div>
+                        </div>
+                        <!-- ------------------------- --><!-- Producto 15 --><!-- ------------------------- -->
+                        <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-product">
+                            <div class="product-card">
+                                <div class="image-container">
+                                    <img src="assets/img/Pagina_principal/productosinImagen.png"
+                                        class="img-fluid product-image" alt="Derivación strap"
+                                        onclick="openModal('modal-producto-12')">
+                                    <a href="https://nuruena.com.co/categoria/productos/7-red-contra-incendio/104-red-contra-incendio"
+                                        target="_blank">
+                                        <button class="quote-button">Cotizar</button>
+                                    </a>
+                                </div>
+                                <h4 class="product-name">PRODUCTO EJEMPLO</h4>
+                            </div>
+                        </div>
+                        <!-- ------------------------- --><!-- Producto 16 --><!-- ------------------------- -->
+                        <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-product">
+                            <div class="product-card">
+                                <div class="image-container">
+                                    <img src="assets/img/Pagina_principal/productosinImagen.png"
+                                        class="img-fluid product-image" alt="Derivación strap"
+                                        onclick="openModal('modal-producto-12')">
+                                    <a href="https://nuruena.com.co/categoria/productos/7-red-contra-incendio/104-red-contra-incendio"
+                                        target="_blank">
+                                        <button class="quote-button">Cotizar</button>
+                                    </a>
+                                </div>
+                                <h4 class="product-name">PRODUCTO EJEMPLO</h4>
+                            </div>
+                        </div>
+                        <!-- ------------------------- --><!-- Producto 17 --><!-- ------------------------- -->
+                        <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-product">
+                            <div class="product-card">
+                                <div class="image-container">
+                                    <img src="assets/img/Pagina_principal/productosinImagen.png"
+                                        class="img-fluid product-image" alt="Derivación strap"
+                                        onclick="openModal('modal-producto-12')">
+                                    <a href="https://nuruena.com.co/categoria/productos/7-red-contra-incendio/104-red-contra-incendio"
+                                        target="_blank">
+                                        <button class="quote-button">Cotizar</button>
+                                    </a>
+                                </div>
+                                <h4 class="product-name">PRODUCTO EJEMPLO</h4>
+                            </div>
+                        </div>
+                        <!-- ------------------------- --><!-- Producto 18 --><!-- ------------------------- -->
+                        <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-product">
+                            <div class="product-card">
+                                <div class="image-container">
+                                    <img src="assets/img/Pagina_principal/productosinImagen.png"
+                                        class="img-fluid product-image" alt="Derivación strap"
+                                        onclick="openModal('modal-producto-12')">
+                                    <a href="https://nuruena.com.co/categoria/productos/7-red-contra-incendio/104-red-contra-incendio"
+                                        target="_blank">
+                                        <button class="quote-button">Cotizar</button>
+                                    </a>
+                                </div>
+                                <h4 class="product-name">PRODUCTO EJEMPLO</h4>
+                            </div>
+                        </div>
+                        <!-- ------------------------- --><!-- Producto 19 --><!-- ------------------------- -->
+                        <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-product">
+                            <div class="product-card">
+                                <div class="image-container">
+                                    <img src="assets/img/Pagina_principal/productosinImagen.png"
+                                        class="img-fluid product-image" alt="Derivación strap"
+                                        onclick="openModal('modal-producto-12')">
+                                    <a href="https://nuruena.com.co/categoria/productos/7-red-contra-incendio/104-red-contra-incendio"
+                                        target="_blank">
+                                        <button class="quote-button">Cotizar</button>
+                                    </a>
+                                </div>
+                                <h4 class="product-name">PRODUCTO EJEMPLO</h4>
+                            </div>
+                        </div>
+                        <!-- ------------------------- --><!-- Producto 20--><!-- ------------------------- -->
+                        <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-product">
+                            <div class="product-card">
+                                <div class="image-container">
+                                    <img src="assets/img/Pagina_principal/productosinImagen.png"
+                                        class="img-fluid product-image" alt="Derivación strap"
+                                        onclick="openModal('modal-producto-12')">
+                                    <a href="https://nuruena.com.co/categoria/productos/7-red-contra-incendio/104-red-contra-incendio"
+                                        target="_blank">
+                                        <button class="quote-button">Cotizar</button>
+                                    </a>
+                                </div>
+                                <h4 class="product-name">PRODUCTO EJEMPLO</h4>
+                            </div>
+                        </div>
+                        <!-- ------------------------- -->
+                        <!-- FIN: Bucle de productos -->
+                    </div>
+                </div>
+            </div>
+            <!-- ------------------------- -->
+
+            <!--------------------------- --><!-- Modal Producto 1 --><!-- --------------------------->
+            <div id="modal-producto-1" class="product-modal">
+                <div class="product-modal-content">
+                    <span class="close-modal" onclick="closeModal('modal-producto-1')">&times;</span>
+                    <img src="assets/img/Pagina_principal/productosinImagen.png" alt="Tubo Rieber C900"
+                        class="modal-image">
+                    <h3>PRODUCTO EJEMPLO</h3>
+                    <p>DESCRIPCION</p>
+                    <a href="https://nuruena.com.co/producto/vista/777-tubo-reiber-c-900-rde18" target="_blank">
+                        <button class="modal-quote-button">Cotizar</button>
+                    </a>
+                </div>
+            </div>
+
+            <!-----------------------------><!-- Modal Producto 2 --><!----------------------------->
+            <div id="modal-producto-2" class="product-modal">
+                <div class="product-modal-content">
+                    <span class="close-modal" onclick="closeModal('modal-producto-2')">&times;</span>
+                    <img src="assets/img/Pagina_principal/productosinImagen.png" alt="Tubo PE100" class="modal-image">
+                    <h3>PRODUCTO EJEMPLO</h3>
+                    <p>DESCRIPCION</p>
+                    <a href="https://nuruena.com.co/categoria/productos/7-red-contra-incendio/104-red-contra-incendio"
+                        target="_blank">
+                        <button class="modal-quote-button">Cotizar</button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ------------------------- --><!-- Modal Producto 3 --><!-- ------------------------- -->
+            <div id="modal-producto-3" class="product-modal">
+                <div class="product-modal-content">
+                    <span class="close-modal" onclick="closeModal('modal-producto-3')">&times;</span>
+                    <img src="assets/img/Pagina_principal/productosinImagen.png" alt="Semicodo Ranurado"
+                        class="modal-image">
+                    <h3>PRODUCTO EJEMPLO</h3>
+                    <p>DESCRIPCION</p>
+                    <a href="https://nuruena.com.co/producto/vista/521-codo-ranurado-ul" target="_blank">
+                        <button class="modal-quote-button">Cotizar</button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ------------------------- --><!-- Modal Producto 4 --><!-- ------------------------- -->
+            <div id="modal-producto-4" class="product-modal">
+                <div class="product-modal-content">
+                    <span class="close-modal" onclick="closeModal('modal-producto-4')">&times;</span>
+                    <img src="assets/img/Pagina_principal/productosinImagen.png" alt="Registro Globo"
+                        class="modal-image">
+                    <h3>PRODUCTO EJEMPLO</h3>
+                    <p>DESCRIPCION</p>
+                    <a href="https://nuruena.com.co/categoria/productos/7-red-contra-incendio/104-red-contra-incendio"
+                        target="_blank">
+                        <button class="modal-quote-button">Cotizar</button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ------------------------- --><!-- Modal Producto 5 --><!-- ------------------------- -->
+            <div id="modal-producto-5" class="product-modal">
+                <div class="product-modal-content">
+                    <span class="close-modal" onclick="closeModal('modal-producto-5')">&times;</span>
+                    <img src="assets/img/Pagina_principal/productosinImagen.png" alt="Tee ranurada ul"
+                        class="modal-image">
+                    <h3>PRODUCTO EJEMPLO</h3>
+                    <p>DESCRIPCION</p>
+                    <a href="https://nuruena.com.co/producto/vista/530-tee-ranurada-ul" target="_blank">
+                        <button class="modal-quote-button">Cotizar</button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ------------------------- --><!-- Modal Producto 6 --><!-- ------------------------- -->
+            <div id="modal-producto-6" class="product-modal">
+                <div class="product-modal-content">
+                    <span class="close-modal" onclick="closeModal('modal-producto-6')">&times;</span>
+                    <img src="assets/img/Pagina_principal/productosinImagen.png" alt="Válvula cortina OS&Y ranurada"
+                        class="modal-image">
+                    <h3>PRODUCTO EJEMPLO</h3>
+                    <p>DESCRIPCION</p>
+                    <a href="https://nuruena.com.co/producto/vista/743-valvula-cortina-os&y--ranurada" target="_blank">
+                        <button class="modal-quote-button">Cotizar</button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ------------------------- --><!-- Modal Producto 7 --><!-- ------------------------- -->
+            <div id="modal-producto-7" class="product-modal">
+                <div class="product-modal-content">
+                    <span class="close-modal" onclick="closeModal('modal-producto-7')">&times;</span>
+                    <img src="assets/img/Pagina_principal/productosinImagen.png" alt="Tubo SCH 10 roja"
+                        class="modal-image">
+                    <h3>PRODUCTO EJEMPLO</h3>
+                    <p>DESCRIPCION</p>
+                    <a href="https://nuruena.com.co/categoria/productos/7-red-contra-incendio/104-red-contra-incendio"
+                        target="_blank">
+                        <button class="modal-quote-button">Cotizar</button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ------------------------- --><!-- Modal Producto 8 --><!-- ------------------------- -->
+            <div id="modal-producto-8" class="product-modal">
+                <div class="product-modal-content">
+                    <span class="close-modal" onclick="closeModal('modal-producto-8')">&times;</span>
+                    <img src="assets/img/Pagina_principal/productosinImagen.png" alt="Tapón copa ranurado ul"
+                        class="modal-image">
+                    <h3>PRODUCTO EJEMPLO</h3>
+                    <p>DESCRIPCION</p>
+                    <a href="https://nuruena.com.co/producto/vista/527-tapon-copa-ranurado-ul" target="_blank">
+                        <button class="modal-quote-button">Cotizar</button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ------------------------- --><!-- Modal Producto 9 --><!-- ------------------------- -->
+            <div id="modal-producto-9" class="product-modal">
+                <div class="product-modal-content">
+                    <span class="close-modal" onclick="closeModal('modal-producto-9')">&times;</span>
+                    <img src="assets/img/Pagina_principal/productosinImagen.png" alt="Válvula mariposa HD supervisada"
+                        class="modal-image">
+                    <h3>PRODUCTO EJEMPLO</h3>
+                    <p>DESCRIPCION</p>
+                    <a href="https://nuruena.com.co/producto/vista/742-valvula-mariposa-hd-supervisada" target="_blank">
+                        <button class="modal-quote-button">Cotizar</button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ------------------------- --><!-- Modal Producto 10 --><!-- ------------------------- -->
+            <div id="modal-producto-10" class="product-modal">
+                <div class="product-modal-content">
+                    <span class="close-modal" onclick="closeModal('modal-producto-10')">&times;</span>
+                    <img src="assets/img/Pagina_principal/productosinImagen.png" alt="Tubo SCH 40 roja"
+                        class="modal-image">
+                    <h3>PRODUCTO EJEMPLO</h3>
+                    <p>DESCRIPCION</p>
+                    <a href="https://nuruena.com.co/categoria/productos/7-red-contra-incendio/104-red-contra-incendio"
+                        target="_blank">
+                        <button class="modal-quote-button">Cotizar</button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ------------------------- --><!-- Modal Producto 11 --><!-- ------------------------- -->
+            <div id="modal-producto-11" class="product-modal">
+                <div class="product-modal-content">
+                    <span class="close-modal" onclick="closeModal('modal-producto-11')">&times;</span>
+                    <img src="assets/img/Pagina_principal/productosinImagen.png" alt="Flanche brida ranurada"
+                        class="modal-image">
+                    <h3>PRODUCTO EJEMPLO</h3>
+                    <p>DESCRIPCION</p>
+                    <a href="https://nuruena.com.co/producto/vista/518-brida-ranurada-ul" target="_blank">
+                        <button class="modal-quote-button">Cotizar</button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ------------------------- --><!-- Modal Producto 12 --><!-- ------------------------- -->
+            <div id="modal-producto-12" class="product-modal">
+                <div class="product-modal-content">
+                    <span class="close-modal" onclick="closeModal('modal-producto-12')">&times;</span>
+                    <img src="assets/img/Pagina_principal/productosinImagen.png" alt="KIT EXPANSOR"
+                        class="modal-image">
+                    <h3>PRODUCTO EJEMPLO</h3>
+                    <p>DESCRIPCION</p>
+                    <a href="https://nuruena.com.co/categoria/productos/7-red-contra-incendio/104-red-contra-incendio"
+                        target="_blank">
+                        <button class="modal-quote-button">Cotizar</button>
+                    </a>
+                </div>
+            </div>
+            <!-- ------------------------- --><!-- Modal Producto 13 --><!-- ------------------------- -->
+            <div id="modal-producto-12" class="product-modal">
+                <div class="product-modal-content">
+                    <span class="close-modal" onclick="closeModal('modal-producto-12')">&times;</span>
+                    <img src="assets/img/Pagina_principal/productosinImagen.png" alt="KIT EXPANSOR"
+                        class="modal-image">
+                    <h3>PRODUCTO EJEMPLO</h3>
+                    <p>DESCRIPCION</p>
+                    <a href="https://nuruena.com.co/categoria/productos/7-red-contra-incendio/104-red-contra-incendio"
+                        target="_blank">
+                        <button class="modal-quote-button">Cotizar</button>
+                    </a>
+                </div>
+            </div>
+            <!-- ------------------------- --><!-- Modal Producto 14 --><!-- ------------------------- -->
+            <div id="modal-producto-12" class="product-modal">
+                <div class="product-modal-content">
+                    <span class="close-modal" onclick="closeModal('modal-producto-12')">&times;</span>
+                    <img src="assets/img/Pagina_principal/productosinImagen.png" alt="KIT EXPANSOR"
+                        class="modal-image">
+                    <h3>PRODUCTO EJEMPLO</h3>
+                    <p>DESCRIPCION</p>
+                    <a href="https://nuruena.com.co/categoria/productos/7-red-contra-incendio/104-red-contra-incendio"
+                        target="_blank">
+                        <button class="modal-quote-button">Cotizar</button>
+                    </a>
+                </div>
+            </div>
+            <!-- ------------------------- --><!-- Modal Producto 15 --><!-- ------------------------- -->
+            <div id="modal-producto-12" class="product-modal">
+                <div class="product-modal-content">
+                    <span class="close-modal" onclick="closeModal('modal-producto-12')">&times;</span>
+                    <img src="assets/img/Pagina_principal/productosinImagen.png" alt="KIT EXPANSOR"
+                        class="modal-image">
+                    <h3>PRODUCTO EJEMPLO</h3>
+                    <p>DESCRIPCION</p>
+                    <a href="https://nuruena.com.co/categoria/productos/7-red-contra-incendio/104-red-contra-incendio"
+                        target="_blank">
+                        <button class="modal-quote-button">Cotizar</button>
+                    </a>
+                </div>
+            </div>
+            <!-- ------------------------- --><!-- Modal Producto 16 --><!-- ------------------------- -->
+            <div id="modal-producto-12" class="product-modal">
+                <div class="product-modal-content">
+                    <span class="close-modal" onclick="closeModal('modal-producto-12')">&times;</span>
+                    <img src="assets/img/Pagina_principal/productosinImagen.png" alt="KIT EXPANSOR"
+                        class="modal-image">
+                    <h3>PRODUCTO EJEMPLO</h3>
+                    <p>DESCRIPCION</p>
+                    <a href="https://nuruena.com.co/categoria/productos/7-red-contra-incendio/104-red-contra-incendio"
+                        target="_blank">
+                        <button class="modal-quote-button">Cotizar</button>
+                    </a>
+                </div>
+            </div>
+            <!-- ------------------------- --><!-- Modal Producto 17 --><!-- ------------------------- -->
+            <div id="modal-producto-12" class="product-modal">
+                <div class="product-modal-content">
+                    <span class="close-modal" onclick="closeModal('modal-producto-12')">&times;</span>
+                    <img src="assets/img/Pagina_principal/productosinImagen.png" alt="KIT EXPANSOR"
+                        class="modal-image">
+                    <h3>PRODUCTO EJEMPLO</h3>
+                    <p>DESCRIPCION</p>
+                    <a href="https://nuruena.com.co/categoria/productos/7-red-contra-incendio/104-red-contra-incendio"
+                        target="_blank">
+                        <button class="modal-quote-button">Cotizar</button>
+                    </a>
+                </div>
+            </div>
+            <!-- ------------------------- --><!-- Modal Producto 18 --><!-- ------------------------- -->
+            <div id="modal-producto-12" class="product-modal">
+                <div class="product-modal-content">
+                    <span class="close-modal" onclick="closeModal('modal-producto-12')">&times;</span>
+                    <img src="assets/img/Pagina_principal/productosinImagen.png" alt="KIT EXPANSOR"
+                        class="modal-image">
+                    <h3>PRODUCTO EJEMPLO</h3>
+                    <p>DESCRIPCION</p>
+                    <a href="https://nuruena.com.co/categoria/productos/7-red-contra-incendio/104-red-contra-incendio"
+                        target="_blank">
+                        <button class="modal-quote-button">Cotizar</button>
+                    </a>
+                </div>
+            </div>
+            <!-- ------------------------- --><!-- Modal Producto 19 --><!-- ------------------------- -->
+            <div id="modal-producto-12" class="product-modal">
+                <div class="product-modal-content">
+                    <span class="close-modal" onclick="closeModal('modal-producto-12')">&times;</span>
+                    <img src="assets/img/Pagina_principal/productosinImagen.png" alt="KIT EXPANSOR"
+                        class="modal-image">
+                    <h3>PRODUCTO EJEMPLO</h3>
+                    <p>DESCRIPCION</p>
+                    <a href="https://nuruena.com.co/categoria/productos/7-red-contra-incendio/104-red-contra-incendio"
+                        target="_blank">
+                        <button class="modal-quote-button">Cotizar</button>
+                    </a>
+                </div>
+            </div>
+            <!-- ------------------------- --><!-- Modal Producto 20 --><!-- ------------------------- -->
+            <div id="modal-producto-12" class="product-modal">
+                <div class="product-modal-content">
+                    <span class="close-modal" onclick="closeModal('modal-producto-12')">&times;</span>
+                    <img src="assets/img/Pagina_principal/productosinImagen.png" alt="KIT EXPANSOR"
+                        class="modal-image">
+                    <h3>PRODUCTO EJEMPLO</h3>
+                    <p>DESCRIPCION</p>
+                    <a href="https://nuruena.com.co/categoria/productos/7-red-contra-incendio/104-red-contra-incendio"
+                        target="_blank">
+                        <button class="modal-quote-button">Cotizar</button>
+                    </a>
+                </div>
+            </div>
+            <!-- ------------------------- -->
+            <!-- FIN: Bucle de descripcion productos -->
+        </section>
+    </main>
+
+    <footer id="footer" class="footer dark-background">
+        <div class="#">
+            <img src="assets/img/bannerrci.w" width="50%" alt="">
+
+            <div class="container">
+                <div class="copyright">
+
+                    <div class="footer-wrapper">
+                        <!-- Contenedor Izquierdo -->
+                        <div class="footer-left">
+                            <a href="https://nuruena.com.co" target="_blank" rel="noopener noreferrer">
+                                <img src="assets/img/nuruenaLogo1.webp" alt="Logo Izquierdo" class="footer-logo">
+                            </a>
+                        </div>
+
+                        <!-- Contenedor Central (Redes Sociales) -->
+                        <div class="footer-center">
+                            <div class="social-links">
+                                <a href="https://www.facebook.com/Nuruena.sas/" target="_blank">
+                                    <img src="assets/img/facebook.webp" alt="">
+                                </a>
+                                <a href="https://www.instagram.com/nuruena.sas" target="_blank">
+                                    <img src="assets/img/instagram.webp" alt="">
+                                </a>
+                                <a href="https://www.youtube.com/@nuruenamedia2497" target="_blank">
+                                    <img src="assets/img/youtube.webp" alt="">
+                                </a>
+                                <a href="https://www.tiktok.com/@nuruenaoficial" target="_blank">
+                                    <img src="assets/img/tiktok.webp" alt="">
+                                </a>
+                                <a href="https://www.linkedin.com/company/nuruena/" target="_blank">
+                                    <img src="assets/img/linkedin.webp" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Contenedor Derecho -->
+                        <div class="footer-right">
+                            <a href="https://nuruena.com.co" target="_blank" rel="noopener noreferrer">
+                                <img src="assets/img/nuruenaLogo1.webp" alt="Logo Derecho" class="footer-logo">
+                            </a>
+                        </div>
+                    </div>
+
+                    <span>Copyright</span>
+                    <strong class="px-1 sitename">2025 Nurueña. Todos los derechos reservados.</strong>
+                    <span><br>Diseño y desarrollo por <strong>Nurueña</strong></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11009029057">
+    </script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/banner.js"></script>
+    <script src="assets/js/preloader.js"></script>
+    <script src="assets/js/modal.js"></script>
+    <script src="assets/js/busqueda.js"></script>
+
+</body>
+
+</html>

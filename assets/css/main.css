@@ -3386,6 +3386,35 @@ body {
   border-right: 3px solid #FFD700; /* línea derecha de la flecha */
   transform: translate(-50%, -50%) rotate(45deg);
 }
+header {
+  border-bottom: 5px solid #FFD700; /* Ajusta el grosor a tu gusto */
+}
 
+#searchInput {
+  max-width: 400px;
+  margin: 0 auto 20px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+}
+
+.category-bar {
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.category-bar .nav-link {
+  color: #333;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: color 0.2s, border-bottom 0.2s;
+}
+
+.category-bar .nav-link:hover {
+  color: #FFD700; /* Rojo al pasar el mouse */
+  border-bottom: 2px solid #FFD700;
+}
 
 
