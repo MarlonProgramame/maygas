@@ -27,7 +27,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="main.css" rel="stylesheet">
 
 </head>
 
@@ -49,7 +49,7 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero" class="active">Inicio</a></li>
-          <li><a href="productos.html">Productos</a></li>
+          <li><a href="productos.php">Productos</a></li>
           <li><a href="#about">Nosotros</a></li>
           <li><a href="#services">Servicios</a></li>
           <li><a href="#contact">Contacto</a></li>
@@ -162,289 +162,53 @@
       </div>
 
       <div class="container">
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+        <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
+            <?php
+            include 'conexion_maygas.php';
 
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">Destacados</li>
-            <li data-filter=".filter-app">Tuberia</li>
-            <li data-filter=".filter-product">Accesorios</li>
-            <li>
-              <a href="https://nuruena.com.co/categoria/productos/1-tuber%C3%ADa-y-accesorios/105-gas"
-                class="enlace-tienda_cont_a" target="_blank" rel="noopener noreferrer">
-                Visita nuestra tienda
-              </a>
-            </li>
-          </ul>
+            // Número de productos a mostrar en el index
+            $productos_index = 8;
 
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+            // Consulta para obtener productos aleatorios (solo 8)
+            $sql_index = "SELECT ItemCode, ItemName, grupo, imagen 
+                          FROM productos 
+                          WHERE ValidComm = 'MTS'
+                          ORDER BY RAND() 
+                          LIMIT $productos_index";
 
-            <!-- ------------------------- -->
+            $result_index = $conn->query($sql_index);
 
-            <!-- ------------------------- --><!-- Producto 1 --><!-- ------------------------- -->
-            <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="product-card">
-                <div class="image-container">
-                  <img src="assets/img/Pagina_principal/productosinImagen.png" class="img-fluid product-image"
-                    alt="TUBERIA INSTALACIONES EMBUTICAS 4M" onclick="openModal('modal-producto-1')">
-                  <a href="https://nuruena.com.co/categoria/productos/1-tuber%C3%ADa-y-accesorios/105-gas"
-                    target="_blank">
-                    <button class="quote-button">Cotizar</button>
-                  </a>
-                </div>
-                <h4 class="product-name">TUBERIA INSTALACIONES EMBUTICAS 4M</h4>
-              </div>
-            </div>
-
-            <!-- ------------------------- --><!-- Producto 2 --><!-- ------------------------- -->
-            <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="product-card">
-                <div class="image-container">
-                  <img src="assets/img/Pagina_principal/productosinImagen.png" class="img-fluid product-image"
-                    alt="TUBERIA INSTALACIONES EMBUTICAS ROLLO" onclick="openModal('modal-producto-2')">
-                  <a href="https://nuruena.com.co/categoria/productos/1-tuber%C3%ADa-y-accesorios/105-gas"
-                    target="_blank">
-                    <button class="quote-button">Cotizar</button>
-                  </a>
-                </div>
-                <h4 class="product-name">TUBERIA INSTALACIONES EMBUTICAS ROLLO</h4>
-              </div>
-            </div>
-
-            <!-- ------------------------- --><!-- Producto 3 --><!-- ------------------------- -->
-            <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="product-card">
-                <div class="image-container">
-                  <img src="assets/img/Pagina_principal/productosinImagen.png" class="img-fluid product-image"
-                    alt="UNION FUSION" onclick="openModal('modal-producto-3')">
-                  <a href="https://nuruena.com.co/categoria/productos/1-tuber%C3%ADa-y-accesorios/105-gas"
-                    target="_blank">
-                    <button class="quote-button">Cotizar</button>
-                  </a>
-                </div>
-                <h4 class="product-name">UNION FUSION</h4>
-              </div>
-            </div>
-
-            <!-- ------------------------- --><!-- Producto 4 --><!-- ------------------------- -->
-            <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="product-card">
-                <div class="image-container">
-                  <img src="assets/img/Pagina_principal/productosinImagen.png" class="img-fluid product-image"
-                    alt="CODO 90°" onclick="openModal('modal-producto-4')">
-                  <a href="https://nuruena.com.co/categoria/productos/1-tuber%C3%ADa-y-accesorios/105-gas"
-                    target="_blank">
-                    <button class="quote-button">Cotizar</button>
-                  </a>
-                </div>
-                <h4 class="product-name">CODO 90°</h4>
-              </div>
-            </div>
-
-            <!-- ------------------------- --><!-- Producto 5 --><!-- ------------------------- -->
-            <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="product-card">
-                <div class="image-container">
-                  <img src="assets/img/Pagina_principal/productosinImagen.png" class="img-fluid product-image"
-                    alt="CODO FUSION ROSCA METALICA H" onclick="openModal('modal-producto-5')">
-                  <a href="https://nuruena.com.co/categoria/productos/1-tuber%C3%ADa-y-accesorios/105-gas"
-                    target="_blank">
-                    <button class="quote-button">Cotizar</button>
-                  </a>
-                </div>
-                <h4 class="product-name">CODO FUSION - ROSCA METALICA H</h4>
-              </div>
-            </div>
-
-            <!-- ------------------------- --><!-- Producto 6 --><!-- ------------------------- -->
-            <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="product-card">
-                <div class="image-container">
-                  <img src="assets/img/Pagina_principal/productosinImagen.png" class="img-fluid product-image"
-                    alt="SCODO 45° FUSION" onclick="openModal('modal-producto-6')">
-                  <a href="https://nuruena.com.co/categoria/productos/1-tuber%C3%ADa-y-accesorios/105-gas"
-                    target="_blank">
-                    <button class="quote-button">Cotizar</button>
-                  </a>
-                </div>
-                <h4 class="product-name">CODO 45° FUSION</h4>
-              </div>
-            </div>
-
-            <!-- ------------------------- --><!-- Producto 7 --><!-- ------------------------- -->
-            <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="product-card">
-                <div class="image-container">
-                  <img src="assets/img/Pagina_principal/productosinImagen.png" class="img-fluid product-image"
-                    alt="UNION FUSION - ROSCA METALICA M" onclick="openModal('modal-producto-7')">
-                  <a href="https://nuruena.com.co/categoria/productos/1-tuber%C3%ADa-y-accesorios/105-gas"
-                    target="_blank">
-                    <button class="quote-button">Cotizar</button>
-                  </a>
-                </div>
-                <h4 class="product-name">UNION FUSION - ROSCA METALICA M</h4>
-              </div>
-            </div>
-
-            <!-- ------------------------- --><!-- Producto 8 --><!-- ------------------------- -->
-            <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="product-card">
-                <div class="image-container">
-                  <img src="assets/img/Pagina_principal/productosinImagen.png" class="img-fluid product-image"
-                    alt="TEE FUSION" onclick="openModal('modal-producto-8')">
-                  <a href="https://nuruena.com.co/categoria/productos/1-tuber%C3%ADa-y-accesorios/105-gas"
-                    target="_blank">
-                    <button class="quote-button">Cotizar</button>
-                  </a>
-                </div>
-                <h4 class="product-name">TEE FUSION</h4>
-              </div>
-            </div>
-            <!-- ------------------------- -->
-            <!-- FIN: Bucle de productos -->
-          </div>
+            if ($result_index && $result_index->num_rows > 0) {
+                while ($row = $result_index->fetch_assoc()) {
+                    ?>
+                    <div class="col-lg-3 col-md-4 col-6 portfolio-item isotope-item">
+                        <div class="product-card">
+                            <div class="image-container">
+                                <img src="assets/img/IMAGENES MAYGAS/<?php echo $row['imagen']; ?>"
+                                    class="img-fluid product-image" 
+                                    alt="<?php echo $row['ItemName']; ?>"
+                                    onclick="openModal('modal-<?php echo $row['ItemCode']; ?>')">
+                                <a href="producto.php?id=<?php echo $row['ItemCode']; ?>" target="_blank">
+                                    <button class="quote-button">Cotizar</button>
+                                </a>
+                            </div>
+                            <h4 class="product-name"><?php echo $row['ItemName']; ?></h4>
+                        </div>
+                    </div>
+                    <?php
+                }
+            } else {
+                echo "<p>No se encontraron productos.</p>";
+            }
+            ?>
         </div>
-      </div>
-      <!-- ------------------------- -->
-
-      <!-- ------------------------- --><!-- Modal Producto 1 --><!-- ------------------------- -->
-      <div id="modal-producto-1" class="product-modal">
-        <div class="product-modal-content">
-          <span class="close-modal" onclick="closeModal('modal-producto-1')">&times;</span>
-          <img src="assets/img/Pagina_principal/productosinImagen.png" alt="TUBERIA INSTALACIONES EMBUTICAS 4M"
-            class="modal-image">
-          <h3>TUBERIA INSTALACIONES EMBUTICAS 4M</h3>
-          <p>Tubería de cobre de alta calidad, diseñada para instalaciones de gas natural (GN) en tramos embutidos
-            dentro de muros o pisos. Su acabado y espesor garantizan resistencia mecánica,
-            durabilidad y protección contra la corrosión. Se suministra en tramos de 4 metros, cumpliendo con las normas
-            técnicas para instalaciones seguras y herméticas.</p>
-          <a href="https://nuruena.com.co/categoria/productos/1-tuber%C3%ADa-y-accesorios/105-gas" target="_blank">
-            <button class="modal-quote-button">Cotizar</button>
-          </a>
-        </div>
-      </div>
-
-      <!-- ------------------------- --><!-- Modal Producto 2 --><!-- ------------------------- -->
-      <div id="modal-producto-2" class="product-modal">
-        <div class="product-modal-content">
-          <span class="close-modal" onclick="closeModal('modal-producto-2')">&times;</span>
-          <img src="assets/img/Pagina_principal/productosinImagen.png" alt="TUBERIA INSTALACIONES EMBUTICAS ROLLO"
-            class="modal-image">
-          <h3>TUBERIA INSTALACIONES EMBUTICAS ROLLO</h3>
-          <p>Tubería de cobre flexible de alta calidad, ideal para instalaciones de gas natural (GN) en tramos embutidos
-            dentro de muros o pisos. Su presentación en rollo permite instalaciones
-            continuas con menos uniones, reduciendo riesgos de fuga y facilitando el trabajo. Ofrece alta resistencia
-            mecánica, durabilidad y protección contra la corrosión, cumpliendo con las normas técnicas vigentes.</p>
-          <a href="https://nuruena.com.co/categoria/productos/1-tuber%C3%ADa-y-accesorios/105-gas" target="_blank">
-            <button class="modal-quote-button">Cotizar</button>
-          </a>
-        </div>
-      </div>
-
-      <!-- ------------------------- --><!-- Modal Producto 3 --><!-- ------------------------- -->
-      <div id="modal-producto-3" class="product-modal">
-        <div class="product-modal-content">
-          <span class="close-modal" onclick="closeModal('modal-producto-3')">&times;</span>
-          <img src="assets/img/Pagina_principal/productosinImagen.png" alt="UNION FUSION" class="modal-image">
-          <h3>UNION FUSION</h3>
-          <p>Accesorio diseñado para unir de forma permanente dos tramos de tubería mediante proceso de fusión térmica,
-            garantizando una conexión homogénea, resistente y libre de fugas. Fabricada en material compatible con gas
-            natural (GN) ofrece alta durabilidad, resistencia mecánica y seguridad en
-            instalaciones residenciales, comerciales e industriales..</p>
-          <a href="https://nuruena.com.co/categoria/productos/1-tuber%C3%ADa-y-accesorios/105-gas" target="_blank">
-            <button class="modal-quote-button">Cotizar</button>
-          </a>
-        </div>
-      </div>
-
-      <!-- ------------------------- --><!-- Modal Producto 4 --><!-- ------------------------- -->
-      <div id="modal-producto-4" class="product-modal">
-        <div class="product-modal-content">
-          <span class="close-modal" onclick="closeModal('modal-producto-4')">&times;</span>
-          <img src="assets/img/Pagina_principal/productosinImagen.png" alt="CODO 90°" class="modal-image">
-          <h3>CODO 90°</h3>
-          <p>Accesorio utilizado para cambiar la dirección de la tubería en un ángulo recto (90°) en instalaciones de
-            gas natural (GN). Fabricado en material resistente y compatible con gas,
-            garantiza una conexión segura, hermética y duradera, disponible en versiones para soldar, prensar o roscar
-            según necesidad.</p>
-          <a href="https://nuruena.com.co/categoria/productos/1-tuber%C3%ADa-y-accesorios/105-gas" target="_blank">
-            <button class="modal-quote-button">Cotizar</button>
-          </a>
-        </div>
-      </div>
-
-      <!-- ------------------------- --><!-- Modal Producto 5 --><!-- ------------------------- -->
-      <div id="modal-producto-5" class="product-modal">
-        <div class="product-modal-content">
-          <span class="close-modal" onclick="closeModal('modal-producto-5')">&times;</span>
-          <img src="assets/img/Pagina_principal/productosinImagen.png" alt="CODO FUSION ROSCA METALICA H"
-            class="modal-image">
-          <h3>CODO FUSION ROSCA METALICA H</h3>
-          <p>Accesorio diseñado para cambiar la dirección de la tubería y realizar la transición entre un sistema de
-            tubería por fusión y una conexión roscada macho. Incorpora un extremo para fusión térmica y otro con inserto
-            metálico roscado hembra, garantizando una unión segura, resistente y libre de fugas. Compatible con gas
-            natural (GN).</p>
-          <a href="https://nuruena.com.co/categoria/productos/1-tuber%C3%ADa-y-accesorios/105-gas" target="_blank">
-            <button class="modal-quote-button">Cotizar</button>
-          </a>
-        </div>
-      </div>
-
-      <!-- ------------------------- --><!-- Modal Producto 6 --><!-- ------------------------- -->
-      <div id="modal-producto-6" class="product-modal">
-        <div class="product-modal-content">
-          <span class="close-modal" onclick="closeModal('modal-producto-6')">&times;</span>
-          <img src="assets/img/Pagina_principal/productosinImagen.png" alt="CODO 45° FUSION" class="modal-image">
-          <h3>CODO 45° FUSION</h3>
-          <p>Accesorio diseñado para desviar la dirección de la tubería en un ángulo de 45° mediante unión por fusión
-            térmica. Fabricado en material de alta resistencia compatible con gas natural (GN), garantiza una conexión
-            homogénea, segura y libre de fugas en instalaciones residenciales, comerciales
-            e industriales.</p>
-          <a href="https://nuruena.com.co/categoria/productos/1-tuber%C3%ADa-y-accesorios/105-gas" target="_blank">
-            <button class="modal-quote-button">Cotizar</button>
-          </a>
-        </div>
-      </div>
-
-      <!-- ------------------------- --><!-- Modal Producto 7 --><!-- ------------------------- -->
-      <div id="modal-producto-7" class="product-modal">
-        <div class="product-modal-content">
-          <span class="close-modal" onclick="closeModal('modal-producto-7')">&times;</span>
-          <img src="assets/img/Pagina_principal/productosinImagen.png" alt="UNION FUSION - ROSCA METALICA M"
-            class="modal-image">
-          <h3>UNION FUSION - ROSCA METALICA M</h3>
-          <p>Accesorio utilizado para conectar un sistema de tubería por fusión térmica con componentes que requieren
-            conexión roscada hembra. Dispone de un extremo para fusión y otro con inserto metálico roscado macho,
-            asegurando una unión resistente, estanca y compatible con gas natural (GN).
-          </p>
-          <a href="https://nuruena.com.co/categoria/productos/1-tuber%C3%ADa-y-accesorios/105-gas" target="_blank">
-            <button class="modal-quote-button">Cotizar</button>
-          </a>
-        </div>
-      </div>
-
-      <!-- ------------------------- --><!-- Modal Producto 8 --><!-- ------------------------- -->
-      <div id="modal-producto-8" class="product-modal">
-        <div class="product-modal-content">
-          <span class="close-modal" onclick="closeModal('modal-producto-8')">&times;</span>
-          <img src="assets/img/Pagina_principal/productosinImagen.png" alt="TEE FUSION" class="modal-image">
-          <h3>TEE FUSION</h3>
-          <p>Accesorio diseñado para derivar o unir tres tramos de tubería mediante unión por fusión térmica. Fabricada
-            en material de alta resistencia compatible con gas natural (GN), garantiza
-            una conexión homogénea, segura y libre de fugas en instalaciones residenciales, comerciales e industriales.
-          </p>
-          <a href="https://nuruena.com.co/categoria/productos/1-tuber%C3%ADa-y-accesorios/105-gas" target="_blank">
-            <button class="modal-quote-button">Cotizar</button>
-          </a>
-        </div>
-      </div>
-      <!-- ------------------------- -->
-      <!-- FIN: Bucle de descripcion productos -->
+    </div>
     </section>
 
     <div class="container-fluid">
       <div class="row">
         <div class="col text-center">
-          <a href="Productos.html"
+          <a href="Productos.php"
             target="_blank">
             <button class="btn bs-danger">Todos los productos</button>
           </a>
@@ -547,7 +311,7 @@
 
         <p>
           Ofrecemos una amplia gama de soluciones MAYGAS® para instalaciones seguras y eficientes de gas. Nuestros
-          servicios incluyen: suministro e instalación de sistemas de tuberías multicapa, accesorios, válvulas y
+          servicios incluyen: suministro e instalación de sistemas de tuberías, accesorios, válvulas y
           complementos especializados. Brindamos asesoría técnica para la correcta selección de equipos y componentes,
           garantizando el cumplimiento de normativas y altos estándares de calidad.
         </p>
@@ -566,7 +330,7 @@
             <a class="nav-link active show d-flex flex-column align-items-center" data-bs-toggle="tab"
               data-bs-target="#features-tab-1">
               <div class=""></div>
-              <h4 class="mb-0 text-center">Tubería Multicapa</h4>
+              <h4 class="mb-0 text-center">Tubería</h4>
             </a>
           </li>
 
@@ -574,7 +338,7 @@
             <a class="nav-link d-flex flex-column align-items-center" data-bs-toggle="tab"
               data-bs-target="#features-tab-2">
               <div class=""></div>
-              <h4 class="mb-0 text-center">Conexiones y Fittings</h4>
+              <h4 class="mb-0 text-center">Conexiones</h4>
             </a>
           </li>
 
@@ -582,7 +346,7 @@
             <a class="nav-link d-flex flex-column align-items-center" data-bs-toggle="tab"
               data-bs-target="#features-tab-3">
               <div class=""></div>
-              <h4 class="mb-0 text-center">Válvulas de Gas</h4>
+              <h4 class="mb-0 text-center">Válvulas</h4>
             </a>
           </li>
 
@@ -590,7 +354,7 @@
             <a class="nav-link d-flex flex-column align-items-center" data-bs-toggle="tab"
               data-bs-target="#features-tab-4">
               <div class=" "></div>
-              <h4 class="mb-0 text-center">Herramientas y Soportería</h4>
+              <h4 class="mb-0 text-center">Herramientas</h4>
             </a>
           </li>
         </ul>
@@ -600,21 +364,19 @@
           <div class="tab-pane fade active show" id="features-tab-1">
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Tubería Multicapa</h3>
+                <h3>Tubería</h3>
                 <p class="fst-italic">
-                  Algunos de nuestros sistemas de tubería multicapa MAYGAS® son:
+                  Algunos de nuestros sistemas de tubería MAYGAS® son:
                 </p>
                 <ul>
-                  <li><i class="bi bi-check2-all"></i> <span>Tubería multicapa PEX-Al-PEX para gas.</span></li>
                   <li><i class="bi bi-check2-all"></i> <span>Rollo de tubería 16 mm, 20 mm, 26 mm y 32 mm.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Tubo recto multicapa para instalaciones visibles.</span>
-                  </li>
-                  <li><i class="bi bi-check2-all"></i> <span>Tubería certificada NTC y EN.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Tubo recto multicapa para instalaciones visibles.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Tubería certificada NTC.</span></li>
                 </ul>
                 <p>
-                  Conozca más de nuestra línea de tuberías multicapa MAYGAS® para instalaciones seguras y duraderas.
+                  Conozca más de nuestra línea de tuberías MAYGAS® para instalaciones seguras y duraderas.
                 </p>
-                <a href="https://nuruena.com.co/categoria/productos/1-tuber%C3%ADa-y-accesorios/105-gas"
+                <a href="productos.php"
                   class="custom-btn" target="_blank" rel="noopener noreferrer">
                   Más Productos <i class="bi bi-arrow-right"></i>
                 </a>
@@ -628,26 +390,26 @@
           <div class="tab-pane fade" id="features-tab-2">
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Conexiones y Fittings</h3>
+                <h3>Conexiones</h3>
                 <p>
-                  Algunas de nuestras conexiones y fittings MAYGAS® son:
+                  Algunas de nuestras conexiones MAYGAS® son:
                 </p>
                 <ul>
-                  <li><i class="bi bi-check2-all"></i> <span>Codo de compresión 90° y 45°.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Unión recta de compresión.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Tee de compresión.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Adaptador macho y hembra.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Codo y Semicodos.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Uniones.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Tee.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Adaptadores.</span></li>
                 </ul>
                 <p>
-                  Conozca más de nuestra gama de conexiones y fittings MAYGAS® para uniones seguras y herméticas.
+                  Conozca más de nuestra gama de conexiones de MAYGAS® para uniones seguras y herméticas.
                 </p>
-                <a href="https://nuruena.com.co/categoria/productos/1-tuber%C3%ADa-y-accesorios/105-gas"
+                <a href="productos.php"
                   class="custom-btn" target="_blank" rel="noopener noreferrer">
                   Más Productos <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="assets/img/Pagina_principal/Logos-Maygas.png" alt="" class="img-fluid">
+                <img src="assets/img/Pagina_principal/banner20240620100649.png" alt="" class="img-fluid">
               </div>
             </div>
           </div>
@@ -655,26 +417,25 @@
           <div class="tab-pane fade" id="features-tab-3">
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Válvulas de Gas</h3>
+                <h3>Válvulas</h3>
                 <p>
                   Algunas de nuestras válvulas para sistemas de gas MAYGAS® son:
                 </p>
                 <ul>
-                  <li><i class="bi bi-check2-all"></i> <span>Válvula de bola con palanca.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Válvula de bola con mariposa.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span> Llave de Bola Fusión-Fusión.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Válvula de 16mm, 20 mm, 25mm .</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Válvula de lujo.</span></li>
                 </ul>
                 <p>
 
                   Conozca más de nuestra línea de válvulas de gas MAYGAS® para control seguro del suministro.
                 </p>
-                <a href="https://nuruena.com.co/categoria/productos/1-tuber%C3%ADa-y-accesorios/105-gas"
+                <a href="productos.php"
                   class="custom-btn" target="_blank" rel="noopener noreferrer">
                   Más Productos <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="assets/img/Pagina_principal/Válvula angular 300PSI UL FM.jpg" alt="" class="img-fluid">
+                <img src="assets/img/Pagina_principal/banner20240620100649.png" alt="" class="img-fluid">
               </div>
             </div>
           </div>
@@ -682,27 +443,27 @@
           <div class="tab-pane fade" id="features-tab-4">
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Herramientas y Soportería</h3>
+                <h3>Herramientas</h3>
                 <p>
-                  Algunas de nuestras herramientas y elementos de soportería MAYGAS® son:
+                  Algunas de nuestras herramientas MAYGAS® son:
                 </p>
                 <ul>
-                  <li><i class="bi bi-check2-all"></i> <span>Termofusor 800W.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Kit Expansor.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>Termofusor.</span></li>
                   <li><i class="bi bi-check2-all"></i> <span>Expasor, Mordazas y Cabezales.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span>CortaTubos.</span></li>
                   <li><i class="bi bi-check2-all"></i> <span>KitTermofusor.</span></li>
                 </ul>
                 <p>
-                  Conozca más de nuestra línea de herramientas y soportería MAYGAS® para instalaciones precisas y
+                  Conozca más de nuestra línea de herramientas de MAYGAS® para instalaciones precisas y
                   ordenadas.
                 </p>
-                <a href="https://nuruena.com.co/categoria/productos/1-tuber%C3%ADa-y-accesorios/105-gas"
+                <a href="productos.php"
                   class="custom-btn" target="_blank" rel="noopener noreferrer">
                   Más Productos <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="assets/img/Pagina_principal/Gabinete tipo 1.jpg" alt="" class="img-fluid">
+                <img src="assets/img/Pagina_principal/banner20240620100649.png" alt="" class="img-fluid">
               </div>
             </div>
           </div>
